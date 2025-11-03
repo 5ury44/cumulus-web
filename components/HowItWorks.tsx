@@ -21,7 +21,8 @@ const steps = [
     number: "03",
     icon: Cpu,
     title: "Allocate",
-    description: "Elastic scaling across GPUs",
+    description:
+      "Multiple jobs run together on shared GPUs. Scale across individual hosts, switch for best prices",
   },
   {
     number: "04",
@@ -54,6 +55,23 @@ export default function HowItWorks() {
           </p>
         </motion.div>
 
+        {/* SDK Example */}
+        <div className="mb-16">
+          <SDKExample />
+          <motion.p
+            initial={{ opacity: 0, y: 10 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.4, delay: 0.2 }}
+            className="text-sm text-gray-500 max-w-3xl mx-auto mt-6 text-center leading-relaxed"
+          >
+            Set your constraints (budget, performance, requirements). We
+            optimize for the best GPU combinations and allocations based on
+            compute load and market conditions to get you the best performance
+            at the lowest price, up to your budget.
+          </motion.p>
+        </div>
+
         {/* Steps */}
         <div className="relative">
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-px bg-gray-800">
@@ -85,9 +103,6 @@ export default function HowItWorks() {
             })}
           </div>
         </div>
-
-        {/* SDK Example */}
-        <SDKExample />
       </div>
     </section>
   );

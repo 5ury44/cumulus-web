@@ -23,19 +23,29 @@ export default function CTA() {
               Get Started
             </h2>
             <p className="text-sm text-gray-500 max-w-xl mx-auto mb-8">
-              Start building with the most liquid GPU cloud
+              Join our network of individual hosts and consumers. Get access to
+              the most liquid GPU cloud.
             </p>
           </div>
 
-          {/* CTA Button */}
-          <div className="flex justify-center">
+          {/* CTA Buttons */}
+          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
             <motion.a
-              href="mailto:contact@cumuluscloud.ai"
+              href="mailto:host@cumuluscloud.ai?subject=Interested in Hosting GPUs"
               className="group inline-flex items-center gap-2 px-8 py-3 border border-white text-white font-light text-sm transition-all duration-300 hover:bg-white hover:text-black"
               whileHover={{ scale: 1.02 }}
               whileTap={{ scale: 0.98 }}
             >
-              Contact
+              Contact to Host
+              <ArrowRight size={16} />
+            </motion.a>
+            <motion.a
+              href="mailto:onboard@cumuluscloud.ai?subject=Interested in GPU Compute Access"
+              className="group inline-flex items-center gap-2 px-8 py-3 border border-white text-white font-light text-sm transition-all duration-300 hover:bg-white hover:text-black"
+              whileHover={{ scale: 1.02 }}
+              whileTap={{ scale: 0.98 }}
+            >
+              Contact to Be Onboarded
               <ArrowRight size={16} />
             </motion.a>
           </div>

@@ -8,19 +8,22 @@ const benefits = [
     icon: Users,
     title: "Users",
     subtitle: "Pay per use",
-    description: "Only for compute consumed",
+    description:
+      "Access individual hosts worldwide. Jobs run alongside others on shared GPUs, keeping costs low. Switch between GPUs seamlessly for the best prices.",
   },
   {
     icon: Building2,
-    title: "Providers",
+    title: "Individual Hosts",
     subtitle: "Maximize utilization",
-    description: "90%+ GPU efficiency",
+    description:
+      "Multiple jobs run on your GPU at the same time. Share resources efficiently and achieve 90%+ utilization while earning revenue.",
   },
   {
     icon: TrendingUp,
     title: "Market",
     subtitle: "Liquid capacity",
-    description: "Dynamic, demand-driven",
+    description:
+      "Dynamic, demand-driven marketplace connecting hosts and consumers for optimal GPU allocation",
   },
 ];
 

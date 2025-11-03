@@ -29,7 +29,8 @@ const features = [
   {
     icon: Network,
     title: "Shared GPUs",
-    description: "Share compute across workloads",
+    description:
+      "Multiple jobs run on one GPU simultaneously. Share resources efficiently across workloads.",
   },
   {
     icon: Brain,
@@ -39,7 +40,8 @@ const features = [
   {
     icon: TrendingUp,
     title: "90%+ Utilization",
-    description: "Phase-aware execution",
+    description:
+      "Run multiple jobs concurrently, maximizing efficiency and value",
   },
 ];
 
