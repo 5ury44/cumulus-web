@@ -7,6 +7,9 @@ export const metadata: Metadata = {
     "Share compute, scale instantly. GPUs that adapt to your workload, not the other way around.",
   keywords:
     "GPU compute, elastic GPU, GPU marketplace, AI compute, machine learning infrastructure, GPU sharing",
+  icons: {
+    icon: "/icon.svg",
+  },
 };
 
 export default function RootLayout({
