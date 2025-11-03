@@ -31,7 +31,7 @@ export default function CTA() {
           {/* CTA Buttons */}
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
             <motion.a
-              href="mailto:host@cumuluscloud.ai?subject=Interested in Hosting GPUs"
+              href="mailto:onboard@cumuluslabs.io?subject=Interested in Hosting GPUs"
               className="group inline-flex items-center gap-2 px-8 py-3 border border-white text-white font-light text-sm transition-all duration-300 hover:bg-white hover:text-black"
               whileHover={{ scale: 1.02 }}
               whileTap={{ scale: 0.98 }}
@@ -40,7 +40,7 @@ export default function CTA() {
               <ArrowRight size={16} />
             </motion.a>
             <motion.a
-              href="mailto:onboard@cumuluscloud.ai?subject=Interested in GPU Compute Access"
+              href="mailto:onboard@cumuluslabs.io?subject=Interested in GPU Compute Access"
               className="group inline-flex items-center gap-2 px-8 py-3 border border-white text-white font-light text-sm transition-all duration-300 hover:bg-white hover:text-black"
               whileHover={{ scale: 1.02 }}
               whileTap={{ scale: 0.98 }}
