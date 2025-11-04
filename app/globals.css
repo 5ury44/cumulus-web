@@ -81,3 +81,8 @@ body {
     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   }
 }
+
+/* Logo carousel hover pause */
+.animate-scroll:hover {
+  animation-play-state: paused;
+}
