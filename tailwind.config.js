@@ -28,7 +28,7 @@ module.exports = {
       },
       animation: {
         "pulse-slow": "pulse 4s cubic-bezier(0.4, 0, 0.6, 1) infinite",
-        scroll: "scroll 30s linear infinite",
+        scroll: "scroll 25s linear infinite",
       },
       keyframes: {
         scroll: {

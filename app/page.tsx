@@ -11,10 +11,10 @@ export default function Home() {
     <main className="min-h-screen">
       <Navbar />
       <Hero />
+      <LogoCarousel />
       <Features />
       <HowItWorks />
       <Benefits />
-      <LogoCarousel />
       <CTA />
     </main>
   );

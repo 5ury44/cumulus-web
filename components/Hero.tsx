@@ -5,11 +5,11 @@ import { ArrowRight } from "lucide-react";
 
 export default function Hero() {
   return (
-    <section className="relative min-h-screen flex items-center justify-center overflow-hidden pt-20 px-4 sm:px-6 lg:px-8">
+    <section className="relative min-h-screen flex items-start justify-center overflow-hidden pt-12 sm:pt-16 px-4 sm:px-6 lg:px-8">
       {/* Grid Pattern Overlay */}
       <div className="absolute inset-0 bg-[linear-gradient(to_right,#1a1a1a_1px,transparent_1px),linear-gradient(to_bottom,#1a1a1a_1px,transparent_1px)] bg-[size:4rem_4rem]" />
 
-      <div className="max-w-4xl mx-auto text-center relative z-10">
+      <div className="max-w-4xl mx-auto text-center relative z-10 pt-16 sm:pt-20">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
@@ -38,8 +38,7 @@ export default function Hero() {
             transition={{ delay: 0.2 }}
             className="text-base sm:text-lg text-gray-500 max-w-xl mx-auto"
           >
-            Share compute, scale instantly. GPUs that adapt to your workload,
-            not the other way around.
+            GPUs that adapt to your workload, not the other way around.
           </motion.p>
 
           {/* CTA */}
