@@ -6,7 +6,7 @@ import { vscDarkPlus } from "react-syntax-highlighter/dist/esm/styles/prism";
 
 export default function SDKExample() {
   const codeString = `# Create client
-client = CumulusClient("http://api.cumulus.cloud")
+client = CumulusClient("http://api.cumuluslabs.io")
 
 # Run with budget and latency constraints
 result = client.run(
