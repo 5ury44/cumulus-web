@@ -7,6 +7,7 @@ const logos = [
   { name: "Palantir", src: "/logos/palantir.png" },
   { name: "Blackstone", src: "/logos/blackstone.png" },
   { name: "UW Madison", src: "/logos/uw-madison.png" },
+  { name: "airnaculus", src: "/logos/airnaculus.png" },
 ];
 
 export default function LogoCarousel() {
