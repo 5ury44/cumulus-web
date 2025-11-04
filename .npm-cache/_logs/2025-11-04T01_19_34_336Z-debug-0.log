@@ -1,0 +1,884 @@
+0 verbose cli /Users/surycuh/.nvm/versions/node/v22.18.0/bin/node /Users/surycuh/.nvm/versions/node/v22.18.0/bin/npm
+1 info using npm@10.9.3
+2 info using node@v22.18.0
+3 silly config load:file:/Users/surycuh/.nvm/versions/node/v22.18.0/lib/node_modules/npm/npmrc
+4 silly config load:file:/Users/surycuh/cumulus-web/.npmrc
+5 silly config load:file:/Users/surycuh/.npmrc
+6 silly config load:file:/Users/surycuh/.nvm/versions/node/v22.18.0/etc/npmrc
+7 verbose title npm install react-syntax-highlighter @types/react-syntax-highlighter
+8 verbose argv "install" "react-syntax-highlighter" "@types/react-syntax-highlighter" "--cache" "./.npm-cache"
+9 verbose logfile logs-max:10 dir:/Users/surycuh/cumulus-web/.npm-cache/_logs/2025-11-04T01_19_34_336Z-
+10 verbose logfile /Users/surycuh/cumulus-web/.npm-cache/_logs/2025-11-04T01_19_34_336Z-debug-0.log
+11 silly logfile done cleaning log files
+12 silly packumentCache heap:4345298944 maxSize:1086324736 maxEntrySize:543162368
+13 silly idealTree buildDeps
+14 silly fetch manifest react-syntax-highlighter@*
+15 silly packumentCache full:https://registry.npmjs.org/react-syntax-highlighter cache-miss
+16 http fetch GET 200 https://registry.npmjs.org/react-syntax-highlighter 191ms (cache miss)
+17 silly packumentCache full:https://registry.npmjs.org/react-syntax-highlighter set size:undefined disposed:false
+18 silly fetch manifest react@^18.2.0
+19 silly packumentCache full:https://registry.npmjs.org/react cache-miss
+20 http fetch GET 200 https://registry.npmjs.org/react 59ms (cache revalidated)
+21 silly packumentCache full:https://registry.npmjs.org/react set size:6220657 disposed:false
+22 silly fetch manifest @types/react-syntax-highlighter@*
+23 silly packumentCache full:https://registry.npmjs.org/@types%2freact-syntax-highlighter cache-miss
+24 http fetch GET 200 https://registry.npmjs.org/@types%2freact-syntax-highlighter 152ms (cache miss)
+25 silly packumentCache full:https://registry.npmjs.org/@types%2freact-syntax-highlighter set size:undefined disposed:false
+26 silly placeDep ROOT @types/react-syntax-highlighter@15.5.13 OK for: cumulus-web@0.1.0 want: *
+27 silly placeDep ROOT react-syntax-highlighter@16.1.0 OK for: cumulus-web@0.1.0 want: *
+28 silly fetch manifest highlight.js@^10.4.1
+29 silly packumentCache full:https://registry.npmjs.org/highlight.js cache-miss
+30 silly fetch manifest highlightjs-vue@^1.0.0
+31 silly packumentCache full:https://registry.npmjs.org/highlightjs-vue cache-miss
+32 silly fetch manifest lowlight@^1.17.0
+33 silly packumentCache full:https://registry.npmjs.org/lowlight cache-miss
+34 silly fetch manifest prismjs@^1.30.0
+35 silly packumentCache full:https://registry.npmjs.org/prismjs cache-miss
+36 silly fetch manifest refractor@^5.0.0
+37 silly packumentCache full:https://registry.npmjs.org/refractor cache-miss
+38 http fetch GET 200 https://registry.npmjs.org/highlight.js 64ms (cache miss)
+39 silly packumentCache full:https://registry.npmjs.org/highlight.js set size:undefined disposed:false
+40 http fetch GET 200 https://registry.npmjs.org/refractor 77ms (cache miss)
+41 silly packumentCache full:https://registry.npmjs.org/refractor set size:undefined disposed:false
+42 http fetch GET 200 https://registry.npmjs.org/lowlight 85ms (cache miss)
+43 silly packumentCache full:https://registry.npmjs.org/lowlight set size:undefined disposed:false
+44 http fetch GET 200 https://registry.npmjs.org/prismjs 87ms (cache miss)
+45 silly packumentCache full:https://registry.npmjs.org/prismjs set size:undefined disposed:false
+46 http fetch GET 200 https://registry.npmjs.org/highlightjs-vue 121ms (cache miss)
+47 silly packumentCache full:https://registry.npmjs.org/highlightjs-vue set size:undefined disposed:false
+48 silly placeDep ROOT highlight.js@10.7.3 OK for: react-syntax-highlighter@16.1.0 want: ^10.4.1
+49 silly placeDep ROOT highlightjs-vue@1.0.0 OK for: react-syntax-highlighter@16.1.0 want: ^1.0.0
+50 silly placeDep ROOT lowlight@1.20.0 OK for: react-syntax-highlighter@16.1.0 want: ^1.17.0
+51 silly placeDep ROOT prismjs@1.30.0 OK for: react-syntax-highlighter@16.1.0 want: ^1.30.0
+52 silly placeDep ROOT refractor@5.0.0 OK for: react-syntax-highlighter@16.1.0 want: ^5.0.0
+53 silly fetch manifest fault@^1.0.0
+54 silly packumentCache full:https://registry.npmjs.org/fault cache-miss
+55 silly fetch manifest @types/hast@^3.0.0
+56 silly packumentCache full:https://registry.npmjs.org/@types%2fhast cache-miss
+57 silly fetch manifest @types/prismjs@^1.0.0
+58 silly packumentCache full:https://registry.npmjs.org/@types%2fprismjs cache-miss
+59 silly fetch manifest hastscript@^9.0.0
+60 silly packumentCache full:https://registry.npmjs.org/hastscript cache-miss
+61 silly fetch manifest parse-entities@^4.0.0
+62 silly packumentCache full:https://registry.npmjs.org/parse-entities cache-miss
+63 http fetch GET 200 https://registry.npmjs.org/hastscript 50ms (cache miss)
+64 silly packumentCache full:https://registry.npmjs.org/hastscript set size:undefined disposed:false
+65 http fetch GET 200 https://registry.npmjs.org/fault 57ms (cache miss)
+66 silly packumentCache full:https://registry.npmjs.org/fault set size:undefined disposed:false
+67 http fetch GET 200 https://registry.npmjs.org/@types%2fhast 58ms (cache miss)
+68 silly packumentCache full:https://registry.npmjs.org/@types%2fhast set size:undefined disposed:false
+69 http fetch GET 200 https://registry.npmjs.org/parse-entities 61ms (cache miss)
+70 silly packumentCache full:https://registry.npmjs.org/parse-entities set size:undefined disposed:false
+71 http fetch GET 200 https://registry.npmjs.org/@types%2fprismjs 87ms (cache miss)
+72 silly packumentCache full:https://registry.npmjs.org/@types%2fprismjs set size:undefined disposed:false
+73 silly placeDep ROOT fault@1.0.4 OK for: lowlight@1.20.0 want: ^1.0.0
+74 silly fetch manifest format@^0.2.0
+75 silly packumentCache full:https://registry.npmjs.org/format cache-miss
+76 http fetch GET 200 https://registry.npmjs.org/format 86ms (cache miss)
+77 silly packumentCache full:https://registry.npmjs.org/format set size:undefined disposed:false
+78 silly placeDep ROOT format@0.2.2 OK for: fault@1.0.4 want: ^0.2.0
+79 silly placeDep ROOT @types/hast@3.0.4 OK for: refractor@5.0.0 want: ^3.0.0
+80 silly placeDep ROOT @types/prismjs@1.26.5 OK for: refractor@5.0.0 want: ^1.0.0
+81 silly placeDep ROOT hastscript@9.0.1 OK for: refractor@5.0.0 want: ^9.0.0
+82 silly placeDep ROOT parse-entities@4.0.2 OK for: refractor@5.0.0 want: ^4.0.0
+83 silly fetch manifest @types/unist@*
+84 silly packumentCache full:https://registry.npmjs.org/@types%2funist cache-miss
+85 silly fetch manifest comma-separated-tokens@^2.0.0
+86 silly packumentCache full:https://registry.npmjs.org/comma-separated-tokens cache-miss
+87 silly fetch manifest hast-util-parse-selector@^4.0.0
+88 silly packumentCache full:https://registry.npmjs.org/hast-util-parse-selector cache-miss
+89 silly fetch manifest property-information@^7.0.0
+90 silly packumentCache full:https://registry.npmjs.org/property-information cache-miss
+91 silly fetch manifest space-separated-tokens@^2.0.0
+92 silly packumentCache full:https://registry.npmjs.org/space-separated-tokens cache-miss
+93 silly fetch manifest @types/unist@^2.0.0
+94 silly packumentCache full:https://registry.npmjs.org/@types%2funist cache-miss
+95 silly fetch manifest character-entities-legacy@^3.0.0
+96 silly packumentCache full:https://registry.npmjs.org/character-entities-legacy cache-miss
+97 silly fetch manifest character-reference-invalid@^2.0.0
+98 silly packumentCache full:https://registry.npmjs.org/character-reference-invalid cache-miss
+99 silly fetch manifest decode-named-character-reference@^1.0.0
+100 silly packumentCache full:https://registry.npmjs.org/decode-named-character-reference cache-miss
+101 silly fetch manifest is-alphanumerical@^2.0.0
+102 silly packumentCache full:https://registry.npmjs.org/is-alphanumerical cache-miss
+103 http fetch GET 200 https://registry.npmjs.org/hast-util-parse-selector 139ms (cache miss)
+104 silly packumentCache full:https://registry.npmjs.org/hast-util-parse-selector set size:undefined disposed:false
+105 silly fetch manifest is-decimal@^2.0.0
+106 silly packumentCache full:https://registry.npmjs.org/is-decimal cache-miss
+107 http fetch GET 200 https://registry.npmjs.org/property-information 142ms (cache miss)
+108 silly packumentCache full:https://registry.npmjs.org/property-information set size:undefined disposed:false
+109 silly fetch manifest is-hexadecimal@^2.0.0
+110 silly packumentCache full:https://registry.npmjs.org/is-hexadecimal cache-miss
+111 http fetch GET 200 https://registry.npmjs.org/space-separated-tokens 144ms (cache miss)
+112 silly packumentCache full:https://registry.npmjs.org/space-separated-tokens set size:undefined disposed:false
+113 http fetch GET 200 https://registry.npmjs.org/comma-separated-tokens 147ms (cache miss)
+114 silly packumentCache full:https://registry.npmjs.org/comma-separated-tokens set size:undefined disposed:false
+115 http fetch GET 200 https://registry.npmjs.org/@types%2funist 148ms (cache miss)
+116 silly packumentCache full:https://registry.npmjs.org/@types%2funist set size:undefined disposed:false
+117 http fetch GET 200 https://registry.npmjs.org/@types%2funist 148ms (cache miss)
+118 silly packumentCache full:https://registry.npmjs.org/@types%2funist set size:undefined disposed:false
+119 http fetch GET 200 https://registry.npmjs.org/decode-named-character-reference 148ms (cache miss)
+120 silly packumentCache full:https://registry.npmjs.org/decode-named-character-reference set size:undefined disposed:false
+121 http fetch GET 200 https://registry.npmjs.org/is-alphanumerical 149ms (cache miss)
+122 silly packumentCache full:https://registry.npmjs.org/is-alphanumerical set size:undefined disposed:false
+123 http fetch GET 200 https://registry.npmjs.org/character-reference-invalid 149ms (cache miss)
+124 silly packumentCache full:https://registry.npmjs.org/character-reference-invalid set size:undefined disposed:false
+125 http fetch GET 200 https://registry.npmjs.org/character-entities-legacy 149ms (cache miss)
+126 silly packumentCache full:https://registry.npmjs.org/character-entities-legacy set size:undefined disposed:false
+127 http fetch GET 200 https://registry.npmjs.org/is-decimal 48ms (cache miss)
+128 silly packumentCache full:https://registry.npmjs.org/is-decimal set size:undefined disposed:false
+129 http fetch GET 200 https://registry.npmjs.org/is-hexadecimal 44ms (cache miss)
+130 silly packumentCache full:https://registry.npmjs.org/is-hexadecimal set size:undefined disposed:false
+131 silly placeDep ROOT @types/unist@3.0.3 OK for: @types/hast@3.0.4 want: *
+132 silly placeDep ROOT comma-separated-tokens@2.0.3 OK for: hastscript@9.0.1 want: ^2.0.0
+133 silly placeDep ROOT hast-util-parse-selector@4.0.0 OK for: hastscript@9.0.1 want: ^4.0.0
+134 silly placeDep ROOT property-information@7.1.0 OK for: hastscript@9.0.1 want: ^7.0.0
+135 silly placeDep ROOT space-separated-tokens@2.0.2 OK for: hastscript@9.0.1 want: ^2.0.0
+136 silly placeDep node_modules/parse-entities @types/unist@2.0.11 OK for: parse-entities@4.0.2 want: ^2.0.0
+137 silly placeDep ROOT character-entities-legacy@3.0.0 OK for: parse-entities@4.0.2 want: ^3.0.0
+138 silly placeDep ROOT character-reference-invalid@2.0.1 OK for: parse-entities@4.0.2 want: ^2.0.0
+139 silly placeDep ROOT decode-named-character-reference@1.2.0 OK for: parse-entities@4.0.2 want: ^1.0.0
+140 silly placeDep ROOT is-alphanumerical@2.0.1 OK for: parse-entities@4.0.2 want: ^2.0.0
+141 silly placeDep ROOT is-decimal@2.0.1 OK for: parse-entities@4.0.2 want: ^2.0.0
+142 silly placeDep ROOT is-hexadecimal@2.0.1 OK for: parse-entities@4.0.2 want: ^2.0.0
+143 silly fetch manifest character-entities@^2.0.0
+144 silly packumentCache full:https://registry.npmjs.org/character-entities cache-miss
+145 silly fetch manifest is-alphabetical@^2.0.0
+146 silly packumentCache full:https://registry.npmjs.org/is-alphabetical cache-miss
+147 http fetch GET 200 https://registry.npmjs.org/character-entities 43ms (cache miss)
+148 silly packumentCache full:https://registry.npmjs.org/character-entities set size:undefined disposed:false
+149 http fetch GET 200 https://registry.npmjs.org/is-alphabetical 47ms (cache miss)
+150 silly packumentCache full:https://registry.npmjs.org/is-alphabetical set size:undefined disposed:false
+151 silly placeDep ROOT character-entities@2.0.2 OK for: decode-named-character-reference@1.2.0 want: ^2.0.0
+152 silly placeDep ROOT is-alphabetical@2.0.1 OK for: is-alphanumerical@2.0.1 want: ^2.0.0
+153 silly reify moves {}
+154 silly audit bulk request {
+154 silly audit   '@alloc/quick-lru': [ '5.2.0' ],
+154 silly audit   '@babel/runtime': [ '7.28.4' ],
+154 silly audit   '@emnapi/core': [ '1.6.0' ],
+154 silly audit   '@emnapi/runtime': [ '1.6.0' ],
+154 silly audit   '@emnapi/wasi-threads': [ '1.1.0' ],
+154 silly audit   '@eslint-community/eslint-utils': [ '4.9.0' ],
+154 silly audit   '@eslint-community/regexpp': [ '4.12.2' ],
+154 silly audit   '@eslint/eslintrc': [ '2.1.4' ],
+154 silly audit   '@eslint/js': [ '8.57.1' ],
+154 silly audit   '@humanwhocodes/config-array': [ '0.13.0' ],
+154 silly audit   '@humanwhocodes/module-importer': [ '1.0.1' ],
+154 silly audit   '@humanwhocodes/object-schema': [ '2.0.3' ],
+154 silly audit   '@isaacs/cliui': [ '8.0.2' ],
+154 silly audit   'ansi-regex': [ '6.2.2', '5.0.1' ],
+154 silly audit   'strip-ansi': [ '7.1.2', '6.0.1' ],
+154 silly audit   '@jridgewell/gen-mapping': [ '0.3.13' ],
+154 silly audit   '@jridgewell/resolve-uri': [ '3.1.2' ],
+154 silly audit   '@jridgewell/sourcemap-codec': [ '1.5.5' ],
+154 silly audit   '@jridgewell/trace-mapping': [ '0.3.31' ],
+154 silly audit   '@mediapipe/tasks-vision': [ '0.10.17' ],
+154 silly audit   '@monogrid/gainmap-js': [ '3.1.0' ],
+154 silly audit   '@napi-rs/wasm-runtime': [ '0.2.12' ],
+154 silly audit   '@next/env': [ '14.2.33' ],
+154 silly audit   '@next/eslint-plugin-next': [ '14.2.33' ],
+154 silly audit   '@next/swc-darwin-arm64': [ '14.2.33' ],
+154 silly audit   '@next/swc-darwin-x64': [ '14.2.33' ],
+154 silly audit   '@next/swc-linux-arm64-gnu': [ '14.2.33' ],
+154 silly audit   '@next/swc-linux-arm64-musl': [ '14.2.33' ],
+154 silly audit   '@next/swc-linux-x64-gnu': [ '14.2.33' ],
+154 silly audit   '@next/swc-linux-x64-musl': [ '14.2.33' ],
+154 silly audit   '@next/swc-win32-arm64-msvc': [ '14.2.33' ],
+154 silly audit   '@next/swc-win32-ia32-msvc': [ '14.2.33' ],
+154 silly audit   '@next/swc-win32-x64-msvc': [ '14.2.33' ],
+154 silly audit   '@nodelib/fs.scandir': [ '2.1.5' ],
+154 silly audit   '@nodelib/fs.stat': [ '2.0.5' ],
+154 silly audit   '@nodelib/fs.walk': [ '1.2.8' ],
+154 silly audit   '@nolyfill/is-core-module': [ '1.0.39' ],
+154 silly audit   '@pkgjs/parseargs': [ '0.11.0' ],
+154 silly audit   '@react-spring/animated': [ '9.7.5' ],
+154 silly audit   '@react-spring/core': [ '9.7.5' ],
+154 silly audit   '@react-spring/rafz': [ '9.7.5' ],
+154 silly audit   '@react-spring/shared': [ '9.7.5' ],
+154 silly audit   '@react-spring/three': [ '9.7.5' ],
+154 silly audit   '@react-spring/types': [ '9.7.5' ],
+154 silly audit   '@react-three/drei': [ '9.122.0' ],
+154 silly audit   '@react-three/fiber': [ '8.18.0' ],
+154 silly audit   zustand: [ '3.7.2', '4.5.7', '5.0.8' ],
+154 silly audit   '@rtsao/scc': [ '1.1.0' ],
+154 silly audit   '@rushstack/eslint-patch': [ '1.14.1' ],
+154 silly audit   '@swc/counter': [ '0.1.3' ],
+154 silly audit   '@swc/helpers': [ '0.5.5' ],
+154 silly audit   '@tybys/wasm-util': [ '0.10.1' ],
+154 silly audit   '@types/draco3d': [ '1.4.10' ],
+154 silly audit   '@types/json5': [ '0.0.29' ],
+154 silly audit   '@types/node': [ '20.19.24' ],
+154 silly audit   '@types/offscreencanvas': [ '2019.7.3' ],
+154 silly audit   '@types/prop-types': [ '15.7.15' ],
+154 silly audit   '@types/react': [ '18.3.26' ],
+154 silly audit   '@types/react-dom': [ '18.3.7' ],
+154 silly audit   '@types/react-reconciler': [ '0.26.7', '0.28.9' ],
+154 silly audit   '@types/stats.js': [ '0.17.4' ],
+154 silly audit   '@types/three': [ '0.161.2' ],
+154 silly audit   '@types/webxr': [ '0.5.24' ],
+154 silly audit   '@typescript-eslint/eslint-plugin': [ '8.46.2' ],
+154 silly audit   ignore: [ '7.0.5', '5.3.2' ],
+154 silly audit   '@typescript-eslint/parser': [ '8.46.2' ],
+154 silly audit   '@typescript-eslint/project-service': [ '8.46.2' ],
+154 silly audit   '@typescript-eslint/scope-manager': [ '8.46.2' ],
+154 silly audit   '@typescript-eslint/tsconfig-utils': [ '8.46.2' ],
+154 silly audit   '@typescript-eslint/type-utils': [ '8.46.2' ],
+154 silly audit   '@typescript-eslint/types': [ '8.46.2' ],
+154 silly audit   '@typescript-eslint/typescript-estree': [ '8.46.2' ],
+154 silly audit   'brace-expansion': [ '2.0.2', '1.1.12' ],
+154 silly audit   minimatch: [ '9.0.5', '3.1.2' ],
+154 silly audit   '@typescript-eslint/utils': [ '8.46.2' ],
+154 silly audit   '@typescript-eslint/visitor-keys': [ '8.46.2' ],
+154 silly audit   'eslint-visitor-keys': [ '4.2.1', '3.4.3' ],
+154 silly audit   '@ungap/structured-clone': [ '1.3.0' ],
+154 silly audit   '@unrs/resolver-binding-android-arm-eabi': [ '1.11.1' ],
+154 silly audit   '@unrs/resolver-binding-android-arm64': [ '1.11.1' ],
+154 silly audit   '@unrs/resolver-binding-darwin-arm64': [ '1.11.1' ],
+154 silly audit   '@unrs/resolver-binding-darwin-x64': [ '1.11.1' ],
+154 silly audit   '@unrs/resolver-binding-freebsd-x64': [ '1.11.1' ],
+154 silly audit   '@unrs/resolver-binding-linux-arm-gnueabihf': [ '1.11.1' ],
+154 silly audit   '@unrs/resolver-binding-linux-arm-musleabihf': [ '1.11.1' ],
+154 silly audit   '@unrs/resolver-binding-linux-arm64-gnu': [ '1.11.1' ],
+154 silly audit   '@unrs/resolver-binding-linux-arm64-musl': [ '1.11.1' ],
+154 silly audit   '@unrs/resolver-binding-linux-ppc64-gnu': [ '1.11.1' ],
+154 silly audit   '@unrs/resolver-binding-linux-riscv64-gnu': [ '1.11.1' ],
+154 silly audit   '@unrs/resolver-binding-linux-riscv64-musl': [ '1.11.1' ],
+154 silly audit   '@unrs/resolver-binding-linux-s390x-gnu': [ '1.11.1' ],
+154 silly audit   '@unrs/resolver-binding-linux-x64-gnu': [ '1.11.1' ],
+154 silly audit   '@unrs/resolver-binding-linux-x64-musl': [ '1.11.1' ],
+154 silly audit   '@unrs/resolver-binding-wasm32-wasi': [ '1.11.1' ],
+154 silly audit   '@unrs/resolver-binding-win32-arm64-msvc': [ '1.11.1' ],
+154 silly audit   '@unrs/resolver-binding-win32-ia32-msvc': [ '1.11.1' ],
+154 silly audit   '@unrs/resolver-binding-win32-x64-msvc': [ '1.11.1' ],
+154 silly audit   '@use-gesture/core': [ '10.3.1' ],
+154 silly audit   '@use-gesture/react': [ '10.3.1' ],
+154 silly audit   acorn: [ '8.15.0' ],
+154 silly audit   'acorn-jsx': [ '5.3.2' ],
+154 silly audit   ajv: [ '6.12.6' ],
+154 silly audit   'ansi-styles': [ '4.3.0', '6.2.3' ],
+154 silly audit   'any-promise': [ '1.3.0' ],
+154 silly audit   anymatch: [ '3.1.3' ],
+154 silly audit   arg: [ '5.0.2' ],
+154 silly audit   argparse: [ '2.0.1' ],
+154 silly audit   'aria-query': [ '5.3.2' ],
+154 silly audit   'array-buffer-byte-length': [ '1.0.2' ],
+154 silly audit   'array-includes': [ '3.1.9' ],
+154 silly audit   'array.prototype.findlast': [ '1.2.5' ],
+154 silly audit   'array.prototype.findlastindex': [ '1.2.6' ],
+154 silly audit   'array.prototype.flat': [ '1.3.3' ],
+154 silly audit   'array.prototype.flatmap': [ '1.3.3' ],
+154 silly audit   'array.prototype.tosorted': [ '1.1.4' ],
+154 silly audit   'arraybuffer.prototype.slice': [ '1.0.4' ],
+154 silly audit   'ast-types-flow': [ '0.0.8' ],
+154 silly audit   'async-function': [ '1.0.0' ],
+154 silly audit   autoprefixer: [ '10.4.21' ],
+154 silly audit   'available-typed-arrays': [ '1.0.7' ],
+154 silly audit   'axe-core': [ '4.11.0' ],
+154 silly audit   'axobject-query': [ '4.1.0' ],
+154 silly audit   'balanced-match': [ '1.0.2' ],
+154 silly audit   'base64-js': [ '1.5.1' ],
+154 silly audit   'baseline-browser-mapping': [ '2.8.21' ],
+154 silly audit   'bidi-js': [ '1.0.3' ],
+154 silly audit   'binary-extensions': [ '2.3.0' ],
+154 silly audit   braces: [ '3.0.3' ],
+154 silly audit   browserslist: [ '4.27.0' ],
+154 silly audit   buffer: [ '6.0.3' ],
+154 silly audit   busboy: [ '1.6.0' ],
+154 silly audit   'call-bind': [ '1.0.8' ],
+154 silly audit   'call-bind-apply-helpers': [ '1.0.2' ],
+154 silly audit   'call-bound': [ '1.0.4' ],
+154 silly audit   callsites: [ '3.1.0' ],
+154 silly audit   'camelcase-css': [ '2.0.1' ],
+154 silly audit   'camera-controls': [ '2.10.1' ],
+154 silly audit   'caniuse-lite': [ '1.0.30001751' ],
+154 silly audit   chalk: [ '4.1.2' ],
+154 silly audit   chokidar: [ '3.6.0' ],
+154 silly audit   'glob-parent': [ '5.1.2', '6.0.2' ],
+154 silly audit   'client-only': [ '0.0.1' ],
+154 silly audit   'color-convert': [ '2.0.1' ],
+154 silly audit   'color-name': [ '1.1.4' ],
+154 silly audit   commander: [ '4.1.1' ],
+154 silly audit   'concat-map': [ '0.0.1' ],
+154 silly audit   'cross-env': [ '7.0.3' ],
+154 silly audit   'cross-spawn': [ '7.0.6' ],
+154 silly audit   cssesc: [ '3.0.0' ],
+154 silly audit   csstype: [ '3.1.3' ],
+154 silly audit   'damerau-levenshtein': [ '1.0.8' ],
+154 silly audit   'data-view-buffer': [ '1.0.2' ],
+154 silly audit   'data-view-byte-length': [ '1.0.2' ],
+154 silly audit   'data-view-byte-offset': [ '1.0.1' ],
+154 silly audit   debug: [ '4.4.3', '3.2.7' ],
+154 silly audit   'deep-is': [ '0.1.4' ],
+154 silly audit   'define-data-property': [ '1.1.4' ],
+154 silly audit   'define-properties': [ '1.2.1' ],
+154 silly audit   'detect-gpu': [ '5.0.70' ],
+154 silly audit   didyoumean: [ '1.2.2' ],
+154 silly audit   dlv: [ '1.1.3' ],
+154 silly audit   doctrine: [ '3.0.0', '2.1.0' ],
+154 silly audit   draco3d: [ '1.5.7' ],
+154 silly audit   'dunder-proto': [ '1.0.1' ],
+154 silly audit   eastasianwidth: [ '0.2.0' ],
+154 silly audit   'electron-to-chromium': [ '1.5.243' ],
+154 silly audit   'emoji-regex': [ '9.2.2', '8.0.0' ],
+154 silly audit   'es-abstract': [ '1.24.0' ],
+154 silly audit   'es-define-property': [ '1.0.1' ],
+154 silly audit   'es-errors': [ '1.3.0' ],
+154 silly audit   'es-iterator-helpers': [ '1.2.1' ],
+154 silly audit   'es-object-atoms': [ '1.1.1' ],
+154 silly audit   'es-set-tostringtag': [ '2.1.0' ],
+154 silly audit   'es-shim-unscopables': [ '1.1.0' ],
+154 silly audit   'es-to-primitive': [ '1.3.0' ],
+154 silly audit   escalade: [ '3.2.0' ],
+154 silly audit   'escape-string-regexp': [ '4.0.0' ],
+154 silly audit   eslint: [ '8.57.1' ],
+154 silly audit   'eslint-config-next': [ '14.2.33' ],
+154 silly audit   'eslint-import-resolver-node': [ '0.3.9' ],
+154 silly audit   'eslint-import-resolver-typescript': [ '3.10.1' ],
+154 silly audit   'eslint-module-utils': [ '2.12.1' ],
+154 silly audit   'eslint-plugin-import': [ '2.32.0' ],
+154 silly audit   semver: [ '6.3.1', '7.7.3' ],
+154 silly audit   'eslint-plugin-jsx-a11y': [ '6.10.2' ],
+154 silly audit   'eslint-plugin-react': [ '7.37.5' ],
+154 silly audit   'eslint-plugin-react-hooks': [ '5.0.0-canary-7118f5dd7-20230705' ],
+154 silly audit   resolve: [ '2.0.0-next.5', '1.22.11' ],
+154 silly audit   'eslint-scope': [ '7.2.2' ],
+154 silly audit   espree: [ '9.6.1' ],
+154 silly audit   esquery: [ '1.6.0' ],
+154 silly audit   esrecurse: [ '4.3.0' ],
+154 silly audit   estraverse: [ '5.3.0' ],
+154 silly audit   esutils: [ '2.0.3' ],
+154 silly audit   'fast-deep-equal': [ '3.1.3' ],
+154 silly audit   'fast-glob': [ '3.3.3' ],
+154 silly audit   'fast-json-stable-stringify': [ '2.1.0' ],
+154 silly audit   'fast-levenshtein': [ '2.0.6' ],
+154 silly audit   fastq: [ '1.19.1' ],
+154 silly audit   fflate: [ '0.6.10' ],
+154 silly audit   'file-entry-cache': [ '6.0.1' ],
+154 silly audit   'fill-range': [ '7.1.1' ],
+154 silly audit   'find-up': [ '5.0.0' ],
+154 silly audit   'flat-cache': [ '3.2.0' ],
+154 silly audit   flatted: [ '3.3.3' ],
+154 silly audit   'for-each': [ '0.3.5' ],
+154 silly audit   'foreground-child': [ '3.3.1' ],
+154 silly audit   'fraction.js': [ '4.3.7' ],
+154 silly audit   'framer-motion': [ '11.18.2' ],
+154 silly audit   'fs.realpath': [ '1.0.0' ],
+154 silly audit   fsevents: [ '2.3.3' ],
+154 silly audit   'function-bind': [ '1.1.2' ],
+154 silly audit   'function.prototype.name': [ '1.1.8' ],
+154 silly audit   'functions-have-names': [ '1.2.3' ],
+154 silly audit   'generator-function': [ '2.0.1' ],
+154 silly audit   'get-intrinsic': [ '1.3.0' ],
+154 silly audit   'get-proto': [ '1.0.1' ],
+154 silly audit   'get-symbol-description': [ '1.1.0' ],
+154 silly audit   'get-tsconfig': [ '4.13.0' ],
+154 silly audit   glob: [ '10.3.10', '7.2.3' ],
+154 silly audit   globals: [ '13.24.0' ],
+154 silly audit   globalthis: [ '1.0.4' ],
+154 silly audit   'glsl-noise': [ '0.0.0' ],
+154 silly audit   gopd: [ '1.2.0' ],
+154 silly audit   'graceful-fs': [ '4.2.11' ],
+154 silly audit   graphemer: [ '1.4.0' ],
+154 silly audit   'has-bigints': [ '1.1.0' ],
+154 silly audit   'has-flag': [ '4.0.0' ],
+154 silly audit   'has-property-descriptors': [ '1.0.2' ],
+154 silly audit   'has-proto': [ '1.2.0' ],
+154 silly audit   'has-symbols': [ '1.1.0' ],
+154 silly audit   'has-tostringtag': [ '1.0.2' ],
+154 silly audit   hasown: [ '2.0.2' ],
+154 silly audit   'hls.js': [ '1.6.13' ],
+154 silly audit   ieee754: [ '1.2.1' ],
+154 silly audit   immediate: [ '3.0.6' ],
+154 silly audit   'import-fresh': [ '3.3.1' ],
+154 silly audit   imurmurhash: [ '0.1.4' ],
+154 silly audit   inflight: [ '1.0.6' ],
+154 silly audit   inherits: [ '2.0.4' ],
+154 silly audit   'internal-slot': [ '1.1.0' ],
+154 silly audit   'is-array-buffer': [ '3.0.5' ],
+154 silly audit   'is-async-function': [ '2.1.1' ],
+154 silly audit   'is-bigint': [ '1.1.0' ],
+154 silly audit   'is-binary-path': [ '2.1.0' ],
+154 silly audit   'is-boolean-object': [ '1.2.2' ],
+154 silly audit   'is-bun-module': [ '2.0.0' ],
+154 silly audit   'is-callable': [ '1.2.7' ],
+154 silly audit   'is-core-module': [ '2.16.1' ],
+154 silly audit   'is-data-view': [ '1.0.2' ],
+154 silly audit   'is-date-object': [ '1.1.0' ],
+154 silly audit   'is-extglob': [ '2.1.1' ],
+154 silly audit   'is-finalizationregistry': [ '1.1.1' ],
+154 silly audit   'is-fullwidth-code-point': [ '3.0.0' ],
+154 silly audit   'is-generator-function': [ '1.1.2' ],
+154 silly audit   'is-glob': [ '4.0.3' ],
+154 silly audit   'is-map': [ '2.0.3' ],
+154 silly audit   'is-negative-zero': [ '2.0.3' ],
+154 silly audit   'is-number': [ '7.0.0' ],
+154 silly audit   'is-number-object': [ '1.1.1' ],
+154 silly audit   'is-path-inside': [ '3.0.3' ],
+154 silly audit   'is-promise': [ '2.2.2' ],
+154 silly audit   'is-regex': [ '1.2.1' ],
+154 silly audit   'is-set': [ '2.0.3' ],
+154 silly audit   'is-shared-array-buffer': [ '1.0.4' ],
+154 silly audit   'is-string': [ '1.1.1' ],
+154 silly audit   'is-symbol': [ '1.1.1' ],
+154 silly audit   'is-typed-array': [ '1.1.15' ],
+154 silly audit   'is-weakmap': [ '2.0.2' ],
+154 silly audit   'is-weakref': [ '1.1.1' ],
+154 silly audit   'is-weakset': [ '2.0.4' ],
+154 silly audit   isarray: [ '2.0.5' ],
+154 silly audit   isexe: [ '2.0.0' ],
+154 silly audit   'iterator.prototype': [ '1.1.5' ],
+154 silly audit   'its-fine': [ '1.2.5' ],
+154 silly audit   jackspeak: [ '2.3.6' ],
+154 silly audit   jiti: [ '1.21.7' ],
+154 silly audit   'js-tokens': [ '4.0.0' ],
+154 silly audit   'js-yaml': [ '4.1.0' ],
+154 silly audit   'json-buffer': [ '3.0.1' ],
+154 silly audit   'json-schema-traverse': [ '0.4.1' ],
+154 silly audit   'json-stable-stringify-without-jsonify': [ '1.0.1' ],
+154 silly audit   json5: [ '1.0.2' ],
+154 silly audit   'jsx-ast-utils': [ '3.3.5' ],
+154 silly audit   keyv: [ '4.5.4' ],
+154 silly audit   'language-subtag-registry': [ '0.3.23' ],
+154 silly audit   'language-tags': [ '1.0.9' ],
+154 silly audit   levn: [ '0.4.1' ],
+154 silly audit   lie: [ '3.3.0' ],
+154 silly audit   lilconfig: [ '3.1.3' ],
+154 silly audit   'lines-and-columns': [ '1.2.4' ],
+154 silly audit   'locate-path': [ '6.0.0' ],
+154 silly audit   'lodash.merge': [ '4.6.2' ],
+154 silly audit   'loose-envify': [ '1.4.0' ],
+154 silly audit   'lru-cache': [ '10.4.3' ],
+154 silly audit   'lucide-react': [ '0.400.0' ],
+154 silly audit   maath: [ '0.10.8' ],
+154 silly audit   'math-intrinsics': [ '1.1.0' ],
+154 silly audit   merge2: [ '1.4.1' ],
+154 silly audit   meshline: [ '3.3.1' ],
+154 silly audit   meshoptimizer: [ '0.18.1' ],
+154 silly audit   micromatch: [ '4.0.8' ],
+154 silly audit   minimist: [ '1.2.8' ],
+154 silly audit   minipass: [ '7.1.2' ],
+154 silly audit   'motion-dom': [ '11.18.1' ],
+154 silly audit   'motion-utils': [ '11.18.1' ],
+154 silly audit   ms: [ '2.1.3' ],
+154 silly audit   mz: [ '2.7.0' ],
+154 silly audit   nanoid: [ '3.3.11' ],
+154 silly audit   'napi-postinstall': [ '0.3.4' ],
+154 silly audit   'natural-compare': [ '1.4.0' ],
+154 silly audit   next: [ '14.2.33' ],
+154 silly audit   postcss: [ '8.4.31', '8.5.6' ],
+154 silly audit   'node-releases': [ '2.0.27' ],
+154 silly audit   'normalize-path': [ '3.0.0' ],
+154 silly audit   'normalize-range': [ '0.1.2' ],
+154 silly audit   'object-assign': [ '4.1.1' ],
+154 silly audit   'object-hash': [ '3.0.0' ],
+154 silly audit   'object-inspect': [ '1.13.4' ],
+154 silly audit   'object-keys': [ '1.1.1' ],
+154 silly audit   'object.assign': [ '4.1.7' ],
+154 silly audit   'object.entries': [ '1.1.9' ],
+154 silly audit   'object.fromentries': [ '2.0.8' ],
+154 silly audit   'object.groupby': [ '1.0.3' ],
+154 silly audit   'object.values': [ '1.2.1' ],
+154 silly audit   once: [ '1.4.0' ],
+154 silly audit   optionator: [ '0.9.4' ],
+154 silly audit   'own-keys': [ '1.0.1' ],
+154 silly audit   'p-limit': [ '3.1.0' ],
+154 silly audit   'p-locate': [ '5.0.0' ],
+154 silly audit   'parent-module': [ '1.0.1' ],
+154 silly audit   'path-exists': [ '4.0.0' ],
+154 silly audit   'path-is-absolute': [ '1.0.1' ],
+154 silly audit   'path-key': [ '3.1.1' ],
+154 silly audit   'path-parse': [ '1.0.7' ],
+154 silly audit   'path-scurry': [ '1.11.1' ],
+154 silly audit   picocolors: [ '1.1.1' ],
+154 silly audit   picomatch: [ '2.3.1', '4.0.3' ],
+154 silly audit   pify: [ '2.3.0' ],
+154 silly audit   pirates: [ '4.0.7' ],
+154 silly audit   'possible-typed-array-names': [ '1.1.0' ],
+154 silly audit   'postcss-import': [ '15.1.0' ],
+154 silly audit   'postcss-js': [ '4.1.0' ],
+154 silly audit   'postcss-load-config': [ '6.0.1' ],
+154 silly audit   'postcss-nested': [ '6.2.0' ],
+154 silly audit   'postcss-selector-parser': [ '6.1.2' ],
+154 silly audit   'postcss-value-parser': [ '4.2.0' ],
+154 silly audit   potpack: [ '1.0.2' ],
+154 silly audit   'prelude-ls': [ '1.2.1' ],
+154 silly audit   'promise-worker-transferable': [ '1.0.4' ],
+154 silly audit   'prop-types': [ '15.8.1' ],
+154 silly audit   punycode: [ '2.3.1' ],
+154 silly audit   'queue-microtask': [ '1.2.3' ],
+154 silly audit   react: [ '18.3.1' ],
+154 silly audit   'react-composer': [ '5.0.3' ],
+154 silly audit   'react-dom': [ '18.3.1' ],
+154 silly audit   scheduler: [ '0.23.2', '0.21.0' ],
+154 silly audit   'react-fast-marquee': [ '1.6.5' ],
+154 silly audit   'react-is': [ '16.13.1' ],
+154 silly audit   'react-reconciler': [ '0.27.0' ],
+154 silly audit   'react-use-measure': [ '2.1.7' ],
+154 silly audit   'read-cache': [ '1.0.0' ],
+154 silly audit   readdirp: [ '3.6.0' ],
+154 silly audit   'reflect.getprototypeof': [ '1.0.10' ],
+154 silly audit   'regexp.prototype.flags': [ '1.5.4' ],
+154 silly audit   'require-from-string': [ '2.0.2' ],
+154 silly audit   'resolve-from': [ '4.0.0' ],
+154 silly audit   'resolve-pkg-maps': [ '1.0.0' ],
+154 silly audit   reusify: [ '1.1.0' ],
+154 silly audit   rimraf: [ '3.0.2' ],
+154 silly audit   'run-parallel': [ '1.2.0' ],
+154 silly audit   'safe-array-concat': [ '1.1.3' ],
+154 silly audit   'safe-push-apply': [ '1.0.0' ],
+154 silly audit   'safe-regex-test': [ '1.1.0' ],
+154 silly audit   'set-function-length': [ '1.2.2' ],
+154 silly audit   'set-function-name': [ '2.0.2' ],
+154 silly audit   'set-proto': [ '1.0.0' ],
+154 silly audit   'shebang-command': [ '2.0.0' ],
+154 silly audit   'shebang-regex': [ '3.0.0' ],
+154 silly audit   'side-channel': [ '1.1.0' ],
+154 silly audit   'side-channel-list': [ '1.0.0' ],
+154 silly audit   'side-channel-map': [ '1.0.1' ],
+154 silly audit   'side-channel-weakmap': [ '1.0.2' ],
+154 silly audit   'signal-exit': [ '4.1.0' ],
+154 silly audit   'source-map-js': [ '1.2.1' ],
+154 silly audit   'stable-hash': [ '0.0.5' ],
+154 silly audit   'stats-gl': [ '2.4.2' ],
+154 silly audit   three: [ '0.170.0', '0.161.0' ],
+154 silly audit   'stats.js': [ '0.17.0' ],
+154 silly audit   'stop-iteration-iterator': [ '1.1.0' ],
+154 silly audit   streamsearch: [ '1.1.0' ],
+154 silly audit   'string-width': [ '5.1.2', '4.2.3' ],
+154 silly audit   'string.prototype.includes': [ '2.0.1' ],
+154 silly audit   'string.prototype.matchall': [ '4.0.12' ],
+154 silly audit   'string.prototype.repeat': [ '1.0.0' ],
+154 silly audit   'string.prototype.trim': [ '1.2.10' ],
+154 silly audit   'string.prototype.trimend': [ '1.0.9' ],
+154 silly audit   'string.prototype.trimstart': [ '1.0.8' ],
+154 silly audit   'strip-bom': [ '3.0.0' ],
+154 silly audit   'strip-json-comments': [ '3.1.1' ],
+154 silly audit   'styled-jsx': [ '5.1.1' ],
+154 silly audit   sucrase: [ '3.35.0' ],
+154 silly audit   'supports-color': [ '7.2.0' ],
+154 silly audit   'supports-preserve-symlinks-flag': [ '1.0.0' ],
+154 silly audit   'suspend-react': [ '0.1.3' ],
+154 silly audit   tailwindcss: [ '3.4.18' ],
+154 silly audit   'text-table': [ '0.2.0' ],
+154 silly audit   thenify: [ '3.3.1' ],
+154 silly audit   'thenify-all': [ '1.6.0' ],
+154 silly audit   'three-mesh-bvh': [ '0.7.8' ],
+154 silly audit   'three-stdlib': [ '2.36.0' ],
+154 silly audit   tinyglobby: [ '0.2.15' ],
+154 silly audit   fdir: [ '6.5.0' ],
+154 silly audit   'to-regex-range': [ '5.0.1' ],
+154 silly audit   'troika-three-text': [ '0.52.4' ],
+154 silly audit   'troika-three-utils': [ '0.52.4' ],
+154 silly audit   'troika-worker-utils': [ '0.52.0' ],
+154 silly audit   'ts-api-utils': [ '2.1.0' ],
+154 silly audit   'ts-interface-checker': [ '0.1.13' ],
+154 silly audit   'tsconfig-paths': [ '3.15.0' ],
+154 silly audit   tslib: [ '2.8.1' ],
+154 silly audit   'tunnel-rat': [ '0.1.2' ],
+154 silly audit   'type-check': [ '0.4.0' ],
+154 silly audit   'type-fest': [ '0.20.2' ],
+154 silly audit   'typed-array-buffer': [ '1.0.3' ],
+154 silly audit   'typed-array-byte-length': [ '1.0.3' ],
+154 silly audit   'typed-array-byte-offset': [ '1.0.4' ],
+154 silly audit   'typed-array-length': [ '1.0.7' ],
+154 silly audit   typescript: [ '5.9.3' ],
+154 silly audit   'unbox-primitive': [ '1.1.0' ],
+154 silly audit   'undici-types': [ '6.21.0' ],
+154 silly audit   'unrs-resolver': [ '1.11.1' ],
+154 silly audit   'update-browserslist-db': [ '1.1.4' ],
+154 silly audit   'uri-js': [ '4.4.1' ],
+154 silly audit   'use-sync-external-store': [ '1.6.0' ],
+154 silly audit   'util-deprecate': [ '1.0.2' ],
+154 silly audit   'utility-types': [ '3.11.0' ],
+154 silly audit   'webgl-constants': [ '1.1.1' ],
+154 silly audit   'webgl-sdf-generator': [ '1.1.1' ],
+154 silly audit   which: [ '2.0.2' ],
+154 silly audit   'which-boxed-primitive': [ '1.1.1' ],
+154 silly audit   'which-builtin-type': [ '1.2.1' ],
+154 silly audit   'which-collection': [ '1.0.2' ],
+154 silly audit   'which-typed-array': [ '1.1.19' ],
+154 silly audit   'word-wrap': [ '1.2.5' ],
+154 silly audit   'wrap-ansi': [ '8.1.0', '7.0.0' ],
+154 silly audit   wrappy: [ '1.0.2' ],
+154 silly audit   'yocto-queue': [ '0.1.0' ],
+154 silly audit   '@types/react-syntax-highlighter': [ '15.5.13' ],
+154 silly audit   'react-syntax-highlighter': [ '16.1.0' ],
+154 silly audit   'highlight.js': [ '10.7.3' ],
+154 silly audit   'highlightjs-vue': [ '1.0.0' ],
+154 silly audit   lowlight: [ '1.20.0' ],
+154 silly audit   prismjs: [ '1.30.0' ],
+154 silly audit   refractor: [ '5.0.0' ],
+154 silly audit   fault: [ '1.0.4' ],
+154 silly audit   format: [ '0.2.2' ],
+154 silly audit   '@types/hast': [ '3.0.4' ],
+154 silly audit   '@types/prismjs': [ '1.26.5' ],
+154 silly audit   hastscript: [ '9.0.1' ],
+154 silly audit   'parse-entities': [ '4.0.2' ],
+154 silly audit   '@types/unist': [ '3.0.3', '2.0.11' ],
+154 silly audit   'comma-separated-tokens': [ '2.0.3' ],
+154 silly audit   'hast-util-parse-selector': [ '4.0.0' ],
+154 silly audit   'property-information': [ '7.1.0' ],
+154 silly audit   'space-separated-tokens': [ '2.0.2' ],
+154 silly audit   'character-entities-legacy': [ '3.0.0' ],
+154 silly audit   'character-reference-invalid': [ '2.0.1' ],
+154 silly audit   'decode-named-character-reference': [ '1.2.0' ],
+154 silly audit   'is-alphanumerical': [ '2.0.1' ],
+154 silly audit   'is-decimal': [ '2.0.1' ],
+154 silly audit   'is-hexadecimal': [ '2.0.1' ],
+154 silly audit   'character-entities': [ '2.0.2' ],
+154 silly audit   'is-alphabetical': [ '2.0.1' ]
+154 silly audit }
+155 verbose reify failed optional dependency /Users/surycuh/cumulus-web/node_modules/@unrs/resolver-binding-win32-x64-msvc
+156 silly reify mark deleted [
+156 silly reify   '/Users/surycuh/cumulus-web/node_modules/@unrs/resolver-binding-win32-x64-msvc'
+156 silly reify ]
+157 verbose reify failed optional dependency /Users/surycuh/cumulus-web/node_modules/@unrs/resolver-binding-win32-ia32-msvc
+158 silly reify mark deleted [
+158 silly reify   '/Users/surycuh/cumulus-web/node_modules/@unrs/resolver-binding-win32-ia32-msvc'
+158 silly reify ]
+159 verbose reify failed optional dependency /Users/surycuh/cumulus-web/node_modules/@unrs/resolver-binding-win32-arm64-msvc
+160 silly reify mark deleted [
+160 silly reify   '/Users/surycuh/cumulus-web/node_modules/@unrs/resolver-binding-win32-arm64-msvc'
+160 silly reify ]
+161 verbose reify failed optional dependency /Users/surycuh/cumulus-web/node_modules/@unrs/resolver-binding-wasm32-wasi
+162 silly reify mark deleted [
+162 silly reify   '/Users/surycuh/cumulus-web/node_modules/@unrs/resolver-binding-wasm32-wasi'
+162 silly reify ]
+163 verbose reify failed optional dependency /Users/surycuh/cumulus-web/node_modules/@napi-rs/wasm-runtime
+164 silly reify mark deleted [ '/Users/surycuh/cumulus-web/node_modules/@napi-rs/wasm-runtime' ]
+165 verbose reify failed optional dependency /Users/surycuh/cumulus-web/node_modules/@emnapi/core
+166 silly reify mark deleted [ '/Users/surycuh/cumulus-web/node_modules/@emnapi/core' ]
+167 verbose reify failed optional dependency /Users/surycuh/cumulus-web/node_modules/@emnapi/runtime
+168 silly reify mark deleted [ '/Users/surycuh/cumulus-web/node_modules/@emnapi/runtime' ]
+169 verbose reify failed optional dependency /Users/surycuh/cumulus-web/node_modules/@tybys/wasm-util
+170 silly reify mark deleted [ '/Users/surycuh/cumulus-web/node_modules/@tybys/wasm-util' ]
+171 verbose reify failed optional dependency /Users/surycuh/cumulus-web/node_modules/@emnapi/wasi-threads
+172 silly reify mark deleted [ '/Users/surycuh/cumulus-web/node_modules/@emnapi/wasi-threads' ]
+173 verbose reify failed optional dependency /Users/surycuh/cumulus-web/node_modules/@unrs/resolver-binding-linux-x64-musl
+174 silly reify mark deleted [
+174 silly reify   '/Users/surycuh/cumulus-web/node_modules/@unrs/resolver-binding-linux-x64-musl'
+174 silly reify ]
+175 verbose reify failed optional dependency /Users/surycuh/cumulus-web/node_modules/@unrs/resolver-binding-linux-x64-gnu
+176 silly reify mark deleted [
+176 silly reify   '/Users/surycuh/cumulus-web/node_modules/@unrs/resolver-binding-linux-x64-gnu'
+176 silly reify ]
+177 verbose reify failed optional dependency /Users/surycuh/cumulus-web/node_modules/@unrs/resolver-binding-linux-s390x-gnu
+178 silly reify mark deleted [
+178 silly reify   '/Users/surycuh/cumulus-web/node_modules/@unrs/resolver-binding-linux-s390x-gnu'
+178 silly reify ]
+179 verbose reify failed optional dependency /Users/surycuh/cumulus-web/node_modules/@unrs/resolver-binding-linux-riscv64-musl
+180 silly reify mark deleted [
+180 silly reify   '/Users/surycuh/cumulus-web/node_modules/@unrs/resolver-binding-linux-riscv64-musl'
+180 silly reify ]
+181 verbose reify failed optional dependency /Users/surycuh/cumulus-web/node_modules/@unrs/resolver-binding-linux-riscv64-gnu
+182 silly reify mark deleted [
+182 silly reify   '/Users/surycuh/cumulus-web/node_modules/@unrs/resolver-binding-linux-riscv64-gnu'
+182 silly reify ]
+183 verbose reify failed optional dependency /Users/surycuh/cumulus-web/node_modules/@unrs/resolver-binding-linux-ppc64-gnu
+184 silly reify mark deleted [
+184 silly reify   '/Users/surycuh/cumulus-web/node_modules/@unrs/resolver-binding-linux-ppc64-gnu'
+184 silly reify ]
+185 verbose reify failed optional dependency /Users/surycuh/cumulus-web/node_modules/@unrs/resolver-binding-linux-arm64-musl
+186 silly reify mark deleted [
+186 silly reify   '/Users/surycuh/cumulus-web/node_modules/@unrs/resolver-binding-linux-arm64-musl'
+186 silly reify ]
+187 verbose reify failed optional dependency /Users/surycuh/cumulus-web/node_modules/@unrs/resolver-binding-linux-arm64-gnu
+188 silly reify mark deleted [
+188 silly reify   '/Users/surycuh/cumulus-web/node_modules/@unrs/resolver-binding-linux-arm64-gnu'
+188 silly reify ]
+189 verbose reify failed optional dependency /Users/surycuh/cumulus-web/node_modules/@unrs/resolver-binding-linux-arm-musleabihf
+190 silly reify mark deleted [
+190 silly reify   '/Users/surycuh/cumulus-web/node_modules/@unrs/resolver-binding-linux-arm-musleabihf'
+190 silly reify ]
+191 verbose reify failed optional dependency /Users/surycuh/cumulus-web/node_modules/@unrs/resolver-binding-linux-arm-gnueabihf
+192 silly reify mark deleted [
+192 silly reify   '/Users/surycuh/cumulus-web/node_modules/@unrs/resolver-binding-linux-arm-gnueabihf'
+192 silly reify ]
+193 verbose reify failed optional dependency /Users/surycuh/cumulus-web/node_modules/@unrs/resolver-binding-freebsd-x64
+194 silly reify mark deleted [
+194 silly reify   '/Users/surycuh/cumulus-web/node_modules/@unrs/resolver-binding-freebsd-x64'
+194 silly reify ]
+195 verbose reify failed optional dependency /Users/surycuh/cumulus-web/node_modules/@unrs/resolver-binding-darwin-x64
+196 silly reify mark deleted [
+196 silly reify   '/Users/surycuh/cumulus-web/node_modules/@unrs/resolver-binding-darwin-x64'
+196 silly reify ]
+197 verbose reify failed optional dependency /Users/surycuh/cumulus-web/node_modules/@unrs/resolver-binding-android-arm64
+198 silly reify mark deleted [
+198 silly reify   '/Users/surycuh/cumulus-web/node_modules/@unrs/resolver-binding-android-arm64'
+198 silly reify ]
+199 verbose reify failed optional dependency /Users/surycuh/cumulus-web/node_modules/@unrs/resolver-binding-android-arm-eabi
+200 silly reify mark deleted [
+200 silly reify   '/Users/surycuh/cumulus-web/node_modules/@unrs/resolver-binding-android-arm-eabi'
+200 silly reify ]
+201 verbose reify failed optional dependency /Users/surycuh/cumulus-web/node_modules/@next/swc-win32-x64-msvc
+202 silly reify mark deleted [ '/Users/surycuh/cumulus-web/node_modules/@next/swc-win32-x64-msvc' ]
+203 verbose reify failed optional dependency /Users/surycuh/cumulus-web/node_modules/@next/swc-win32-ia32-msvc
+204 silly reify mark deleted [ '/Users/surycuh/cumulus-web/node_modules/@next/swc-win32-ia32-msvc' ]
+205 verbose reify failed optional dependency /Users/surycuh/cumulus-web/node_modules/@next/swc-win32-arm64-msvc
+206 silly reify mark deleted [
+206 silly reify   '/Users/surycuh/cumulus-web/node_modules/@next/swc-win32-arm64-msvc'
+206 silly reify ]
+207 verbose reify failed optional dependency /Users/surycuh/cumulus-web/node_modules/@next/swc-linux-x64-musl
+208 silly reify mark deleted [ '/Users/surycuh/cumulus-web/node_modules/@next/swc-linux-x64-musl' ]
+209 verbose reify failed optional dependency /Users/surycuh/cumulus-web/node_modules/@next/swc-linux-x64-gnu
+210 silly reify mark deleted [ '/Users/surycuh/cumulus-web/node_modules/@next/swc-linux-x64-gnu' ]
+211 verbose reify failed optional dependency /Users/surycuh/cumulus-web/node_modules/@next/swc-linux-arm64-musl
+212 silly reify mark deleted [
+212 silly reify   '/Users/surycuh/cumulus-web/node_modules/@next/swc-linux-arm64-musl'
+212 silly reify ]
+213 verbose reify failed optional dependency /Users/surycuh/cumulus-web/node_modules/@next/swc-linux-arm64-gnu
+214 silly reify mark deleted [ '/Users/surycuh/cumulus-web/node_modules/@next/swc-linux-arm64-gnu' ]
+215 verbose reify failed optional dependency /Users/surycuh/cumulus-web/node_modules/@next/swc-darwin-x64
+216 silly reify mark deleted [ '/Users/surycuh/cumulus-web/node_modules/@next/swc-darwin-x64' ]
+217 http cache character-entities@https://registry.npmjs.org/character-entities/-/character-entities-2.0.2.tgz 0ms (cache hit)
+218 http cache is-alphabetical@https://registry.npmjs.org/is-alphabetical/-/is-alphabetical-2.0.1.tgz 0ms (cache hit)
+219 http cache is-decimal@https://registry.npmjs.org/is-decimal/-/is-decimal-2.0.1.tgz 0ms (cache hit)
+220 http cache is-hexadecimal@https://registry.npmjs.org/is-hexadecimal/-/is-hexadecimal-2.0.1.tgz 0ms (cache hit)
+221 http cache decode-named-character-reference@https://registry.npmjs.org/decode-named-character-reference/-/decode-named-character-reference-1.2.0.tgz 0ms (cache hit)
+222 http cache is-alphanumerical@https://registry.npmjs.org/is-alphanumerical/-/is-alphanumerical-2.0.1.tgz 0ms (cache hit)
+223 http cache character-reference-invalid@https://registry.npmjs.org/character-reference-invalid/-/character-reference-invalid-2.0.1.tgz 0ms (cache hit)
+224 http cache character-entities-legacy@https://registry.npmjs.org/character-entities-legacy/-/character-entities-legacy-3.0.0.tgz 0ms (cache hit)
+225 http cache space-separated-tokens@https://registry.npmjs.org/space-separated-tokens/-/space-separated-tokens-2.0.2.tgz 0ms (cache hit)
+226 http cache property-information@https://registry.npmjs.org/property-information/-/property-information-7.1.0.tgz 0ms (cache hit)
+227 http cache hast-util-parse-selector@https://registry.npmjs.org/hast-util-parse-selector/-/hast-util-parse-selector-4.0.0.tgz 0ms (cache hit)
+228 http cache comma-separated-tokens@https://registry.npmjs.org/comma-separated-tokens/-/comma-separated-tokens-2.0.3.tgz 0ms (cache hit)
+229 http cache @types/unist@https://registry.npmjs.org/@types/unist/-/unist-3.0.3.tgz 0ms (cache hit)
+230 http cache parse-entities@https://registry.npmjs.org/parse-entities/-/parse-entities-4.0.2.tgz 0ms (cache hit)
+231 http cache hastscript@https://registry.npmjs.org/hastscript/-/hastscript-9.0.1.tgz 0ms (cache hit)
+232 http cache @types/prismjs@https://registry.npmjs.org/@types/prismjs/-/prismjs-1.26.5.tgz 0ms (cache hit)
+233 http cache @types/hast@https://registry.npmjs.org/@types/hast/-/hast-3.0.4.tgz 0ms (cache hit)
+234 http cache format@https://registry.npmjs.org/format/-/format-0.2.2.tgz 0ms (cache hit)
+235 http cache fault@https://registry.npmjs.org/fault/-/fault-1.0.4.tgz 0ms (cache hit)
+236 http cache refractor@https://registry.npmjs.org/refractor/-/refractor-5.0.0.tgz 0ms (cache hit)
+237 http cache prismjs@https://registry.npmjs.org/prismjs/-/prismjs-1.30.0.tgz 0ms (cache hit)
+238 http cache lowlight@https://registry.npmjs.org/lowlight/-/lowlight-1.20.0.tgz 0ms (cache hit)
+239 http cache highlightjs-vue@https://registry.npmjs.org/highlightjs-vue/-/highlightjs-vue-1.0.0.tgz 0ms (cache hit)
+240 http cache react-syntax-highlighter@https://registry.npmjs.org/react-syntax-highlighter/-/react-syntax-highlighter-16.1.0.tgz 0ms (cache hit)
+241 http cache @types/react-syntax-highlighter@https://registry.npmjs.org/@types/react-syntax-highlighter/-/react-syntax-highlighter-15.5.13.tgz 0ms (cache hit)
+242 http cache @emnapi/wasi-threads@https://registry.npmjs.org/@emnapi/wasi-threads/-/wasi-threads-1.1.0.tgz 0ms (cache hit)
+243 http cache @tybys/wasm-util@https://registry.npmjs.org/@tybys/wasm-util/-/wasm-util-0.10.1.tgz 0ms (cache hit)
+244 http cache @napi-rs/wasm-runtime@https://registry.npmjs.org/@napi-rs/wasm-runtime/-/wasm-runtime-0.2.12.tgz 0ms (cache hit)
+245 http cache @emnapi/core@https://registry.npmjs.org/@emnapi/core/-/core-1.6.0.tgz 0ms (cache hit)
+246 http cache @emnapi/runtime@https://registry.npmjs.org/@emnapi/runtime/-/runtime-1.6.0.tgz 0ms (cache hit)
+247 http cache @types/unist@https://registry.npmjs.org/@types/unist/-/unist-2.0.11.tgz 0ms (cache hit)
+248 http cache highlight.js@https://registry.npmjs.org/highlight.js/-/highlight.js-10.7.3.tgz 0ms (cache hit)
+249 silly tarball no local data for character-entities@https://registry.npmjs.org/character-entities/-/character-entities-2.0.2.tgz. Extracting by manifest.
+250 silly tarball no local data for is-alphabetical@https://registry.npmjs.org/is-alphabetical/-/is-alphabetical-2.0.1.tgz. Extracting by manifest.
+251 silly tarball no local data for is-decimal@https://registry.npmjs.org/is-decimal/-/is-decimal-2.0.1.tgz. Extracting by manifest.
+252 silly tarball no local data for is-hexadecimal@https://registry.npmjs.org/is-hexadecimal/-/is-hexadecimal-2.0.1.tgz. Extracting by manifest.
+253 silly tarball no local data for decode-named-character-reference@https://registry.npmjs.org/decode-named-character-reference/-/decode-named-character-reference-1.2.0.tgz. Extracting by manifest.
+254 silly tarball no local data for is-alphanumerical@https://registry.npmjs.org/is-alphanumerical/-/is-alphanumerical-2.0.1.tgz. Extracting by manifest.
+255 silly tarball no local data for character-reference-invalid@https://registry.npmjs.org/character-reference-invalid/-/character-reference-invalid-2.0.1.tgz. Extracting by manifest.
+256 silly tarball no local data for character-entities-legacy@https://registry.npmjs.org/character-entities-legacy/-/character-entities-legacy-3.0.0.tgz. Extracting by manifest.
+257 silly tarball no local data for space-separated-tokens@https://registry.npmjs.org/space-separated-tokens/-/space-separated-tokens-2.0.2.tgz. Extracting by manifest.
+258 silly tarball no local data for property-information@https://registry.npmjs.org/property-information/-/property-information-7.1.0.tgz. Extracting by manifest.
+259 silly tarball no local data for hast-util-parse-selector@https://registry.npmjs.org/hast-util-parse-selector/-/hast-util-parse-selector-4.0.0.tgz. Extracting by manifest.
+260 silly tarball no local data for comma-separated-tokens@https://registry.npmjs.org/comma-separated-tokens/-/comma-separated-tokens-2.0.3.tgz. Extracting by manifest.
+261 silly tarball no local data for @types/unist@https://registry.npmjs.org/@types/unist/-/unist-3.0.3.tgz. Extracting by manifest.
+262 silly tarball no local data for parse-entities@https://registry.npmjs.org/parse-entities/-/parse-entities-4.0.2.tgz. Extracting by manifest.
+263 silly tarball no local data for hastscript@https://registry.npmjs.org/hastscript/-/hastscript-9.0.1.tgz. Extracting by manifest.
+264 silly tarball no local data for @types/prismjs@https://registry.npmjs.org/@types/prismjs/-/prismjs-1.26.5.tgz. Extracting by manifest.
+265 silly tarball no local data for format@https://registry.npmjs.org/format/-/format-0.2.2.tgz. Extracting by manifest.
+266 silly tarball no local data for fault@https://registry.npmjs.org/fault/-/fault-1.0.4.tgz. Extracting by manifest.
+267 silly tarball no local data for refractor@https://registry.npmjs.org/refractor/-/refractor-5.0.0.tgz. Extracting by manifest.
+268 silly tarball no local data for prismjs@https://registry.npmjs.org/prismjs/-/prismjs-1.30.0.tgz. Extracting by manifest.
+269 silly tarball no local data for lowlight@https://registry.npmjs.org/lowlight/-/lowlight-1.20.0.tgz. Extracting by manifest.
+270 silly tarball no local data for highlightjs-vue@https://registry.npmjs.org/highlightjs-vue/-/highlightjs-vue-1.0.0.tgz. Extracting by manifest.
+271 silly tarball no local data for @types/hast@https://registry.npmjs.org/@types/hast/-/hast-3.0.4.tgz. Extracting by manifest.
+272 silly tarball no local data for react-syntax-highlighter@https://registry.npmjs.org/react-syntax-highlighter/-/react-syntax-highlighter-16.1.0.tgz. Extracting by manifest.
+273 silly tarball no local data for @types/react-syntax-highlighter@https://registry.npmjs.org/@types/react-syntax-highlighter/-/react-syntax-highlighter-15.5.13.tgz. Extracting by manifest.
+274 silly tarball no local data for @types/unist@https://registry.npmjs.org/@types/unist/-/unist-2.0.11.tgz. Extracting by manifest.
+275 silly tarball no local data for highlight.js@https://registry.npmjs.org/highlight.js/-/highlight.js-10.7.3.tgz. Extracting by manifest.
+276 http fetch GET 200 https://registry.npmjs.org/character-entities-legacy/-/character-entities-legacy-3.0.0.tgz 48ms (cache miss)
+277 http fetch GET 200 https://registry.npmjs.org/is-decimal/-/is-decimal-2.0.1.tgz 59ms (cache miss)
+278 http fetch GET 200 https://registry.npmjs.org/space-separated-tokens/-/space-separated-tokens-2.0.2.tgz 59ms (cache miss)
+279 http fetch GET 200 https://registry.npmjs.org/character-reference-invalid/-/character-reference-invalid-2.0.1.tgz 59ms (cache miss)
+280 http fetch GET 200 https://registry.npmjs.org/is-alphanumerical/-/is-alphanumerical-2.0.1.tgz 60ms (cache miss)
+281 http fetch GET 200 https://registry.npmjs.org/decode-named-character-reference/-/decode-named-character-reference-1.2.0.tgz 61ms (cache miss)
+282 http fetch GET 200 https://registry.npmjs.org/is-hexadecimal/-/is-hexadecimal-2.0.1.tgz 63ms (cache miss)
+283 http fetch GET 200 https://registry.npmjs.org/character-entities/-/character-entities-2.0.2.tgz 64ms (cache miss)
+284 http fetch GET 200 https://registry.npmjs.org/hastscript/-/hastscript-9.0.1.tgz 71ms (cache miss)
+285 http fetch GET 200 https://registry.npmjs.org/comma-separated-tokens/-/comma-separated-tokens-2.0.3.tgz 95ms (cache miss)
+286 http fetch GET 200 https://registry.npmjs.org/property-information/-/property-information-7.1.0.tgz 97ms (cache miss)
+287 http fetch GET 200 https://registry.npmjs.org/fault/-/fault-1.0.4.tgz 108ms (cache miss)
+288 http fetch GET 200 https://registry.npmjs.org/highlightjs-vue/-/highlightjs-vue-1.0.0.tgz 115ms (cache miss)
+289 http fetch GET 200 https://registry.npmjs.org/lowlight/-/lowlight-1.20.0.tgz 116ms (cache miss)
+290 http fetch GET 200 https://registry.npmjs.org/hast-util-parse-selector/-/hast-util-parse-selector-4.0.0.tgz 135ms (cache miss)
+291 http fetch GET 200 https://registry.npmjs.org/is-alphabetical/-/is-alphabetical-2.0.1.tgz 141ms (cache miss)
+292 http fetch GET 200 https://registry.npmjs.org/format/-/format-0.2.2.tgz 146ms (cache miss)
+293 http fetch GET 200 https://registry.npmjs.org/@types/hast/-/hast-3.0.4.tgz 146ms (cache miss)
+294 http fetch GET 200 https://registry.npmjs.org/@types/prismjs/-/prismjs-1.26.5.tgz 155ms (cache miss)
+295 http fetch POST 200 https://registry.npmjs.org/-/npm/v1/security/advisories/bulk 182ms
+296 silly audit report {}
+297 http fetch GET 200 https://registry.npmjs.org/@types/react-syntax-highlighter/-/react-syntax-highlighter-15.5.13.tgz 180ms (cache miss)
+298 http fetch GET 200 https://registry.npmjs.org/@types/unist/-/unist-2.0.11.tgz 204ms (cache miss)
+299 http fetch GET 200 https://registry.npmjs.org/parse-entities/-/parse-entities-4.0.2.tgz 213ms (cache miss)
+300 http fetch GET 200 https://registry.npmjs.org/refractor/-/refractor-5.0.0.tgz 249ms (cache miss)
+301 http fetch GET 200 https://registry.npmjs.org/@types/unist/-/unist-3.0.3.tgz 271ms (cache miss)
+302 http fetch GET 200 https://registry.npmjs.org/prismjs/-/prismjs-1.30.0.tgz 328ms (cache miss)
+303 http fetch GET 200 https://registry.npmjs.org/react-syntax-highlighter/-/react-syntax-highlighter-16.1.0.tgz 439ms (cache miss)
+304 http fetch GET 200 https://registry.npmjs.org/highlight.js/-/highlight.js-10.7.3.tgz 442ms (cache miss)
+305 silly ADD node_modules/is-alphabetical
+306 silly ADD node_modules/character-entities
+307 silly ADD node_modules/is-hexadecimal
+308 silly ADD node_modules/is-decimal
+309 silly ADD node_modules/is-alphanumerical
+310 silly ADD node_modules/decode-named-character-reference
+311 silly ADD node_modules/character-reference-invalid
+312 silly ADD node_modules/character-entities-legacy
+313 silly ADD node_modules/space-separated-tokens
+314 silly ADD node_modules/property-information
+315 silly ADD node_modules/hast-util-parse-selector
+316 silly ADD node_modules/comma-separated-tokens
+317 silly ADD node_modules/@types/unist
+318 silly ADD node_modules/parse-entities
+319 silly ADD node_modules/parse-entities/node_modules/@types/unist
+320 silly ADD node_modules/hastscript
+321 silly ADD node_modules/@types/prismjs
+322 silly ADD node_modules/@types/hast
+323 silly ADD node_modules/format
+324 silly ADD node_modules/fault
+325 silly ADD node_modules/refractor
+326 silly ADD node_modules/prismjs
+327 silly ADD node_modules/lowlight
+328 silly ADD node_modules/highlightjs-vue
+329 silly ADD node_modules/highlight.js
+330 silly ADD node_modules/react-syntax-highlighter
+331 silly ADD node_modules/@types/react-syntax-highlighter
+332 silly ADD
+333 silly ADD
+334 silly ADD
+335 silly ADD
+336 silly ADD
+337 silly ADD
+338 silly ADD
+339 silly ADD
+340 silly ADD
+341 silly ADD
+342 silly ADD
+343 silly ADD
+344 silly ADD
+345 silly ADD
+346 silly ADD
+347 silly ADD
+348 silly ADD
+349 silly ADD
+350 silly ADD
+351 silly ADD
+352 silly ADD
+353 silly ADD
+354 silly ADD
+355 silly ADD
+356 silly ADD
+357 silly ADD
+358 silly ADD
+359 silly ADD
+360 silly ADD
+361 silly ADD
+362 silly ADD
+363 verbose cwd /Users/surycuh/cumulus-web
+364 verbose os Darwin 23.2.0
+365 verbose node v22.18.0
+366 verbose npm  v10.9.3
+367 verbose exit 0
+368 info ok

@@ -1,8 +1,22 @@
 "use client";
 
 import { motion } from "framer-motion";
+import { Prism as SyntaxHighlighter } from "react-syntax-highlighter";
+import { vscDarkPlus } from "react-syntax-highlighter/dist/esm/styles/prism";
 
 export default function SDKExample() {
+  const codeString = `# Create client
+client = CumulusClient("http://api.cumulus.cloud")
+
+# Run with budget and latency constraints
+result = client.run(
+    func=_remote_llm_generate,
+    budget="$0.10",  # max spend per job
+    latency="100ms", # latency target
+    params=[prompt, config_dict, hf_id],
+    requirements=["torch", "transformers", "accelerate"]
+)`;
+
   return (
     <motion.div
       initial={{ opacity: 0, y: 20 }}
@@ -11,7 +25,7 @@ export default function SDKExample() {
       transition={{ duration: 0.4 }}
       className="mt-16 max-w-3xl mx-auto"
     >
-      <div className="border border-gray-800 bg-black">
+      <div className="border border-gray-800 bg-black rounded-lg overflow-hidden">
         <div className="flex items-center gap-2 px-4 py-3 border-b border-gray-800">
           <div className="w-2 h-2 rounded-full bg-gray-600" />
           <div className="w-2 h-2 rounded-full bg-gray-600" />
@@ -20,19 +34,19 @@ export default function SDKExample() {
             example.py
           </span>
         </div>
-        <pre className="p-6 text-sm text-gray-300 font-mono overflow-x-auto">
-          <code>{`# Create client
-client = CumulusClient("http://api.cumulus.cloud")
-
-# Run with budget and latency constraints
-result = client.run(
-    func=_remote_llm_generate,
-    budget=0.10,
-    latency="10ms",
-    params=[prompt, config_dict, hf_id],
-    requirements=["torch", "transformers", "accelerate"]
-)`}</code>
-        </pre>
+        <SyntaxHighlighter
+          language="python"
+          style={vscDarkPlus}
+          customStyle={{
+            margin: 0,
+            padding: "1.5rem",
+            background: "#000000",
+            fontSize: "0.875rem",
+          }}
+          showLineNumbers={false}
+        >
+          {codeString}
+        </SyntaxHighlighter>
       </div>
     </motion.div>
   );
