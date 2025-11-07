@@ -70,8 +70,9 @@ export default function HowItWorks() {
               >
                 Set your constraints (budget, performance, requirements). We
                 optimize for the best GPU combinations and allocations based on
-                compute load and market conditions to get you the best
-                performance at the lowest price, up to your budget.
+                compute load and market conditions to get you the best training
+                time or inference latency at the lowest price, up to your
+                budget.
               </motion.p>
             </div>
             <motion.div
