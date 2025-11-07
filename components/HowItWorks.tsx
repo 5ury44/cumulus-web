@@ -3,6 +3,7 @@
 import { motion } from "framer-motion";
 import { Code, Zap, Cpu, CreditCard } from "lucide-react";
 import SDKExample from "./SDKExample";
+import JobDetailsGraphs from "./JobDetailsGraphs";
 
 const steps = [
   {
@@ -55,21 +56,39 @@ export default function HowItWorks() {
           </p>
         </motion.div>
 
-        {/* SDK Example */}
-        <div className="mb-16">
-          <SDKExample />
-          <motion.p
-            initial={{ opacity: 0, y: 10 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.4, delay: 0.2 }}
-            className="text-sm text-gray-500 max-w-3xl mx-auto mt-6 text-center leading-relaxed"
-          >
-            Set your constraints (budget, performance, requirements). We
-            optimize for the best GPU combinations and allocations based on
-            compute load and market conditions to get you the best performance
-            at the lowest price, up to your budget.
-          </motion.p>
+        {/* SDK + Console */}
+        <div className="mb-20">
+          <div className="space-y-12">
+            <div className="max-w-3xl mx-auto">
+              <SDKExample />
+              <motion.p
+                initial={{ opacity: 0, y: 10 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.4, delay: 0.2 }}
+                className="text-sm text-gray-500 max-w-2xl mx-auto mt-6 text-center leading-relaxed"
+              >
+                Set your constraints (budget, latency, requirements) and launch
+                the job. As soon as it starts running, we orchestrate the
+                optimal mix of GPUs and stream live utilization, cost, and
+                worker metrics back into your console so you can watch progress
+                in real time.
+              </motion.p>
+            </div>
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.5, delay: 0.1 }}
+              className="max-w-5xl mx-auto"
+            >
+              <JobDetailsGraphs
+                variant="embedded"
+                title="Cumulus Console"
+                subtitle="Monitoring jobs with real-time telemetry"
+              />
+            </motion.div>
+          </div>
         </div>
 
         {/* Steps */}
