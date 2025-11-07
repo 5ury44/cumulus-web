@@ -31,6 +31,8 @@ const formatCost = (cents: number) => {
 
 // Generate dummy utilization data
 // Using fixed base date to avoid hydration mismatch
+// Memory reflects fine-tuning Llama 2 7B on 80GB A100/H100 GPUs
+// Typical usage: 60-75GB (model weights ~7GB BF16 + optimizer ~14GB + gradients ~7GB + activations ~10-20GB)
 const FIXED_BASE_DATE = new Date("2025-11-06T21:00:00Z");
 
 const generateUtilizationData = () => {
@@ -46,8 +48,8 @@ const generateUtilizationData = () => {
         hour: "2-digit",
         minute: "2-digit",
       }),
-      memory: Math.random() * 4 + 12,
-      utilization: Math.random() * 20 + 70,
+      memory: Math.random() * 8 + 65, // 65-73GB (high utilization on 80GB GPUs)
+      utilization: Math.random() * 10 + 85, // 85-95% (high GPU utilization for fine-tuning)
       temperature: Math.random() * 10 + 65,
       power: Math.random() * 50 + 250,
     });
@@ -101,6 +103,7 @@ const generateCostBreakdownData = () => {
 // Generate dummy job metrics
 // Total GPU hours: 2.5 + 2.3 + 1.8 = 6.6 hours
 // Total cost: A100 (4.8h * $0.55) + H100 (1.8h * $1.60) = $2.64 + $2.88 = $5.52 = 552 cents
+// Peak memory reflects fine-tuning Llama 2 7B on 80GB GPUs (A100/H100)
 const generateJobMetrics = () => {
   const a100Hours = 4.8; // 2.5 + 2.3
   const h100Hours = 1.8;
@@ -109,8 +112,8 @@ const generateJobMetrics = () => {
 
   return {
     totalGPUHours: 6.6,
-    avgUtilization: 78.5,
-    peakMemory: 16.2,
+    avgUtilization: 90.2, // Average GPU utilization for fine-tuning (85-95% range)
+    peakMemory: 72.4, // Peak VRAM usage for fine-tuning Llama 2 7B on 80GB GPUs
     checkpointsCount: 2,
     totalCostCents: totalCostCents,
     efficiencyScore: 85,
