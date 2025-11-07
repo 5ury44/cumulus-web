@@ -56,37 +56,74 @@ const generateUtilizationData = () => {
 };
 
 // Generate dummy cost breakdown data
+// A100: 4.8 hours total (2.5 + 2.3) at $0.55/h = $2.64 = 264 cents
+// H100: 1.8 hours at $1.60/h = $2.88 = 288 cents
+// Total: $5.52 = 552 cents
 const generateCostBreakdownData = () => {
+  const a100TotalCents = Math.round(4.8 * 55); // 4.8h * $0.55/h
+  const h100TotalCents = Math.round(1.8 * 160); // 1.8h * $1.60/h
+  const totalCostCents = a100TotalCents + h100TotalCents;
+
   return {
-    totalCostCents: 4200, // $42.00
+    totalCostCents: totalCostCents, // ~$5.52
     gpuTypeData: [
-      { name: "A100", value: 2400, formatted: "$24.00" },
-      { name: "H100", value: 1800, formatted: "$18.00" },
+      {
+        name: "A100",
+        value: a100TotalCents,
+        formatted: formatCost(a100TotalCents),
+      },
+      {
+        name: "H100",
+        value: h100TotalCents,
+        formatted: formatCost(h100TotalCents),
+      },
     ],
     workerData: [
-      { name: "Worker 0", cost: 1250, formatted: "$12.50" },
-      { name: "Worker 1", cost: 1150, formatted: "$11.50" },
-      { name: "Worker 2", cost: 1800, formatted: "$18.00" },
+      {
+        name: "Worker 0",
+        cost: Math.round(2.5 * 55),
+        formatted: formatCost(Math.round(2.5 * 55)),
+      },
+      {
+        name: "Worker 1",
+        cost: Math.round(2.3 * 55),
+        formatted: formatCost(Math.round(2.3 * 55)),
+      },
+      {
+        name: "Worker 2",
+        cost: Math.round(1.8 * 160),
+        formatted: formatCost(Math.round(1.8 * 160)),
+      },
     ],
   };
 };
 
 // Generate dummy job metrics
+// Total GPU hours: 2.5 + 2.3 + 1.8 = 6.6 hours
+// Total cost: A100 (4.8h * $0.55) + H100 (1.8h * $1.60) = $2.64 + $2.88 = $5.52 = 552 cents
 const generateJobMetrics = () => {
+  const a100Hours = 4.8; // 2.5 + 2.3
+  const h100Hours = 1.8;
+  const totalCostCents =
+    Math.round(a100Hours * 55) + Math.round(h100Hours * 160);
+
   return {
     totalGPUHours: 6.6,
     avgUtilization: 78.5,
     peakMemory: 16.2,
-    checkpointsCount: 3,
-    totalCostCents: 4200,
+    checkpointsCount: 2,
+    totalCostCents: totalCostCents,
     efficiencyScore: 85,
   };
 };
 
 // Generate dummy worker timeline data
 // Using fixed base date to avoid hydration mismatch
+// Pricing: A100 at $0.55/hour, H100 at $1.60/hour (below market rates)
 const generateWorkerTimelineData = () => {
   const baseTime = FIXED_BASE_DATE.getTime();
+  // A100: $0.55/hour = 55 cents/hour
+  // H100: $1.60/hour = 160 cents/hour
   return [
     {
       id: "1",
@@ -95,7 +132,7 @@ const generateWorkerTimelineData = () => {
       joined_at: new Date(baseTime - 2.5 * 60 * 60 * 1000).toISOString(),
       left_at: null,
       last_seen: new Date(baseTime).toISOString(),
-      cost: 1250,
+      cost: Math.round(2.5 * 55), // 2.5h * $0.55/h = $1.375 = 138 cents
       duration: "2.5h",
       isActive: true,
     },
@@ -106,7 +143,7 @@ const generateWorkerTimelineData = () => {
       joined_at: new Date(baseTime - 2.3 * 60 * 60 * 1000).toISOString(),
       left_at: null,
       last_seen: new Date(baseTime).toISOString(),
-      cost: 1150,
+      cost: Math.round(2.3 * 55), // 2.3h * $0.55/h = $1.265 = 127 cents
       duration: "2.3h",
       isActive: true,
     },
@@ -117,7 +154,7 @@ const generateWorkerTimelineData = () => {
       joined_at: new Date(baseTime - 1.8 * 60 * 60 * 1000).toISOString(),
       left_at: new Date(baseTime - 0.2 * 60 * 60 * 1000).toISOString(),
       last_seen: new Date(baseTime - 0.2 * 60 * 60 * 1000).toISOString(),
-      cost: 1800,
+      cost: Math.round(1.8 * 160), // 1.8h * $1.60/h = $2.88 = 288 cents
       duration: "1.8h",
       isActive: false,
     },
