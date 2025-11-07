@@ -45,7 +45,7 @@ export default function CTA() {
               whileHover={{ scale: 1.02 }}
               whileTap={{ scale: 0.98 }}
             >
-              Contact to Be Onboarded
+              Contact to Rent
               <ArrowRight size={16} />
             </motion.a>
           </div>

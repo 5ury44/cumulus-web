@@ -21,7 +21,14 @@ export default function Navbar() {
     { name: "Features", href: "#features" },
     { name: "How It Works", href: "#how-it-works" },
     { name: "Benefits", href: "#benefits" },
+    { name: "Contact", href: "#cta" },
   ];
+
+  const consoleLink = {
+    name: "Console",
+    href: "https://console.cumuluslabs.io",
+    external: true,
+  };
 
   return (
     <motion.nav
@@ -58,12 +65,14 @@ export default function Navbar() {
               </a>
             ))}
             <motion.a
-              href="#cta"
+              href={consoleLink.href}
+              target="_blank"
+              rel="noopener noreferrer"
               className="px-6 py-2.5 border border-white text-white font-light text-sm hover:bg-white hover:text-black transition-all duration-300"
               whileHover={{ scale: 1.02 }}
               whileTap={{ scale: 0.98 }}
             >
-              Get Started
+              {consoleLink.name}
             </motion.a>
           </div>
 
@@ -96,13 +105,17 @@ export default function Navbar() {
                     {item.name}
                   </a>
                 ))}
-                <a
-                  href="#cta"
+                <motion.a
+                  href={consoleLink.href}
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="px-6 py-2.5 border border-white text-white font-light text-sm text-center hover:bg-white hover:text-black transition-all duration-300"
                   onClick={() => setIsMobileMenuOpen(false)}
+                  whileHover={{ scale: 1.02 }}
+                  whileTap={{ scale: 0.98 }}
                 >
-                  Get Started
-                </a>
+                  {consoleLink.name}
+                </motion.a>
               </div>
             </motion.div>
           )}
