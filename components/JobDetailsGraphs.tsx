@@ -124,6 +124,34 @@ const generateWorkerTimelineData = () => {
   ];
 };
 
+// Generate dummy checkpoints data
+// Using fixed base date to avoid hydration mismatch
+const generateCheckpointsData = () => {
+  const baseTime = FIXED_BASE_DATE.getTime();
+  return [
+    {
+      id: "1",
+      checkpoint_id: "ckpt_epoch_10_step_5000",
+      epoch: "10",
+      step: "5000",
+      s3_key: "checkpoints/job_123/epoch_10_step_5000.pt",
+      s3_bucket: "cumulus-checkpoints",
+      file_size_bytes: "2147483648", // 2 GB
+      created_at: new Date(baseTime - 1.5 * 60 * 60 * 1000).toISOString(),
+    },
+    {
+      id: "2",
+      checkpoint_id: "ckpt_epoch_20_step_10000",
+      epoch: "20",
+      step: "10000",
+      s3_key: "checkpoints/job_123/epoch_20_step_10000.pt",
+      s3_bucket: "cumulus-checkpoints",
+      file_size_bytes: "2147483648", // 2 GB
+      created_at: new Date(baseTime - 0.8 * 60 * 60 * 1000).toISOString(),
+    },
+  ];
+};
+
 const COLORS = [
   "#3b82f6", // blue
   "#8b5cf6", // purple
@@ -138,6 +166,7 @@ const utilizationData = generateUtilizationData();
 const costData = generateCostBreakdownData();
 const jobMetrics = generateJobMetrics();
 const workerTimelineData = generateWorkerTimelineData();
+const checkpointsData = generateCheckpointsData();
 
 export default function JobDetailsGraphs({
   variant = "standalone",
@@ -438,63 +467,6 @@ export default function JobDetailsGraphs({
                   </LineChart>
                 </ResponsiveContainer>
               </div>
-
-              <div>
-                <h4 className="text-white font-semibold mb-4">
-                  Temperature & Power
-                </h4>
-                <ResponsiveContainer width="100%" height={300}>
-                  <LineChart data={utilizationData}>
-                    <CartesianGrid strokeDasharray="3 3" stroke="#374151" />
-                    <XAxis
-                      dataKey="time"
-                      stroke="#9ca3af"
-                      style={{ fontSize: "12px" }}
-                    />
-                    <YAxis
-                      yAxisId="left"
-                      stroke="#9ca3af"
-                      style={{ fontSize: "12px" }}
-                      label={{
-                        value: "°C",
-                        angle: -90,
-                        position: "insideLeft",
-                      }}
-                    />
-                    <YAxis
-                      yAxisId="right"
-                      orientation="right"
-                      stroke="#9ca3af"
-                      style={{ fontSize: "12px" }}
-                      label={{ value: "W", angle: 90, position: "insideRight" }}
-                    />
-                    <Tooltip
-                      contentStyle={{
-                        backgroundColor: "#18181b",
-                        border: "1px solid #3f3f46",
-                        borderRadius: "8px",
-                      }}
-                    />
-                    <Legend />
-                    <Line
-                      yAxisId="left"
-                      type="monotone"
-                      dataKey="temperature"
-                      stroke="#ef4444"
-                      name="Temperature (°C)"
-                      strokeWidth={2}
-                    />
-                    <Line
-                      yAxisId="right"
-                      type="monotone"
-                      dataKey="power"
-                      stroke="#f59e0b"
-                      name="Power (W)"
-                      strokeWidth={2}
-                    />
-                  </LineChart>
-                </ResponsiveContainer>
-              </div>
             </div>
           </motion.div>
 
@@ -573,6 +545,97 @@ export default function JobDetailsGraphs({
                             {formatCost(worker.cost)}
                           </div>
                         </div>
+                      </div>
+                    </div>
+                  );
+                })}
+              </div>
+            )}
+          </motion.div>
+
+          {/* Checkpoints List */}
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.4, delay: 0.4 }}
+            className={cardBaseClasses}
+          >
+            <div className="mb-4">
+              <h3 className="text-xl font-semibold text-white mb-1">
+                Checkpoints
+              </h3>
+              <p className="text-sm text-zinc-500">Saved model checkpoints</p>
+            </div>
+            {checkpointsData.length === 0 ? (
+              <div className="text-zinc-400 text-center py-8">
+                No checkpoints saved yet
+              </div>
+            ) : (
+              <div className="space-y-3">
+                {checkpointsData.map((checkpoint) => {
+                  const formatFileSize = (bytes: string | null) => {
+                    if (!bytes) return "—";
+                    const size = parseFloat(bytes);
+                    if (size < 1024) return `${size} B`;
+                    if (size < 1024 * 1024)
+                      return `${(size / 1024).toFixed(2)} KB`;
+                    if (size < 1024 * 1024 * 1024)
+                      return `${(size / (1024 * 1024)).toFixed(2)} MB`;
+                    return `${(size / (1024 * 1024 * 1024)).toFixed(2)} GB`;
+                  };
+
+                  const formatDate = (dateString: string | null) => {
+                    if (!dateString) return "—";
+                    return new Date(dateString).toLocaleString();
+                  };
+
+                  return (
+                    <div
+                      key={checkpoint.id}
+                      className="bg-zinc-900 border border-zinc-800 rounded-lg p-4"
+                    >
+                      <div className="flex items-start justify-between">
+                        <div className="flex-1">
+                          <div className="flex items-center gap-4 mb-2">
+                            <span className="text-white font-semibold">
+                              {checkpoint.checkpoint_id || checkpoint.id}
+                            </span>
+                            {checkpoint.epoch && (
+                              <span className="text-zinc-500 text-sm">
+                                Epoch: {checkpoint.epoch}
+                              </span>
+                            )}
+                            {checkpoint.step && (
+                              <span className="text-zinc-500 text-sm">
+                                Step: {checkpoint.step}
+                              </span>
+                            )}
+                          </div>
+                          <div className="text-sm text-zinc-500 space-y-1">
+                            <div>
+                              Size: {formatFileSize(checkpoint.file_size_bytes)}
+                            </div>
+                            <div>
+                              Created: {formatDate(checkpoint.created_at)}
+                            </div>
+                            {checkpoint.s3_bucket && checkpoint.s3_key && (
+                              <div className="text-xs font-mono text-zinc-600">
+                                s3://{checkpoint.s3_bucket}/{checkpoint.s3_key}
+                              </div>
+                            )}
+                          </div>
+                        </div>
+                        {checkpoint.s3_key && (
+                          <button
+                            className="px-3 py-1.5 text-sm border-2 border-zinc-800 text-zinc-400 hover:bg-zinc-900 hover:text-white rounded-lg transition-colors"
+                            onClick={() => {
+                              // Placeholder for download
+                            }}
+                          >
+                            Download
+                          </button>
+                        )}
                       </div>
                     </div>
                   );

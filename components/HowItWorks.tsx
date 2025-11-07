@@ -68,11 +68,10 @@ export default function HowItWorks() {
                 transition={{ duration: 0.4, delay: 0.2 }}
                 className="text-sm text-gray-500 max-w-2xl mx-auto mt-6 text-center leading-relaxed"
               >
-                Set your constraints (budget, latency, requirements) and launch
-                the job. As soon as it starts running, we orchestrate the
-                optimal mix of GPUs and stream live utilization, cost, and
-                worker metrics back into your console so you can watch progress
-                in real time.
+                Set your constraints (budget, performance, requirements). We
+                optimize for the best GPU combinations and allocations based on
+                compute load and market conditions to get you the best
+                performance at the lowest price, up to your budget.
               </motion.p>
             </div>
             <motion.div
