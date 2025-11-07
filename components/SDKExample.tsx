@@ -8,13 +8,13 @@ export default function SDKExample() {
   const codeString = `# Create client
 client = CumulusClient("http://api.cumuluslabs.io")
 
-# Run with budget and latency constraints
+# Run training with budget and time constraints
 result = client.run(
-    func=_remote_llm_generate,
-    budget="$0.10",  # max spend per job
-    latency="100ms", # latency target
-    params=[prompt, config_dict, hf_id],
-    requirements=["torch", "transformers", "accelerate"]
+    func=finetune_llama2_7b,
+    budget="$100.00",    # max spend per job
+    training_time="8h",  # target training time
+    params=[model_config, dataset_path, num_epochs],
+    requirements=["torch", "transformers", "accelerate", "datasets"]
 )`;
 
   return (
