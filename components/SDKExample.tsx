@@ -12,7 +12,7 @@ client = CumulusClient("http://api.cumuluslabs.io")
 result = client.run(
     func=finetune_llama2_7b,
     budget="$100.00",    # max spend per job
-    training_time="8h",  # target training time
+    optimization="time",  # optimize for time or price
     params=[model_config, dataset_path, num_epochs],
     requirements=["torch", "transformers", "accelerate", "datasets"]
 )`;
