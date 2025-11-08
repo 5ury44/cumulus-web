@@ -11,7 +11,7 @@ client = CumulusClient("http://api.cumuluslabs.io")
 # Run training with budget and time constraints
 result = client.run(
     func=finetune_llama2_7b,
-    budget="$100.00",    # max spend per job
+    budget="5.00",        # max spend per GPU/hour
     optimization="time",  # optimize for time or price
     params=[model_config, dataset_path, num_epochs],
     requirements=["torch", "transformers", "accelerate", "datasets"]
