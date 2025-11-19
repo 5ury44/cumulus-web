@@ -7,7 +7,7 @@ export default function CTA() {
   return (
     <section
       id="cta"
-      className="relative py-24 sm:py-32 px-4 sm:px-6 lg:px-8 overflow-hidden"
+      className="relative py-16 sm:py-20 px-4 sm:px-6 lg:px-8 overflow-hidden"
     >
       <div className="max-w-4xl mx-auto text-center relative z-10">
         <motion.div
@@ -19,7 +19,7 @@ export default function CTA() {
         >
           {/* Headline */}
           <div>
-            <h2 className="text-4xl sm:text-5xl lg:text-6xl font-light text-white mb-6">
+            <h2 className="text-4xl sm:text-5xl lg:text-6xl font-normal text-white mb-6">
               Get Started
             </h2>
             <p className="text-sm text-gray-500 max-w-xl mx-auto mb-8">

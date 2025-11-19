@@ -231,19 +231,15 @@ export default function JobDetailsGraphs({
 
   const innerClassName = isStandalone
     ? "max-w-7xl mx-auto"
-    : "rounded-3xl border border-zinc-900/60 bg-black/60 backdrop-blur-sm p-6 sm:p-10 shadow-2xl";
+    : "bg-black p-6 sm:p-8";
 
   const headerClassName = isStandalone
     ? "text-center mb-16"
-    : "mb-12 text-center lg:text-left";
+    : "mb-8 text-center lg:text-left";
 
-  const contentWrapperClass = isStandalone ? "space-y-6" : "space-y-5";
+  const contentWrapperClass = isStandalone ? "space-y-6" : "space-y-6";
 
-  const cardBaseClasses = `${
-    isStandalone
-      ? "bg-black border border-zinc-800"
-      : "bg-black/85 border border-zinc-900/70 backdrop-blur"
-  } rounded-xl p-6 shadow-lg`;
+  const cardBaseClasses = "relative bg-black border border-white/10 p-6 tech-border";
 
   return (
     <div className={outerClassName}>
@@ -321,15 +317,15 @@ export default function JobDetailsGraphs({
               ].map((metric) => (
                 <div
                   key={metric.label}
-                  className="bg-zinc-900 border border-zinc-800 rounded-lg p-4"
+                  className="bg-white/5 border border-white/10 p-4"
                 >
-                  <div className="text-zinc-500 text-sm mb-1">
+                  <div className="text-gray-500 text-xs uppercase tracking-wider mb-1">
                     {metric.label}
                   </div>
-                  <div className="text-white text-2xl font-bold">
+                  <div className="text-white text-2xl font-mono">
                     {metric.value}
                     {metric.unit && (
-                      <span className="text-zinc-600 text-lg ml-1">
+                      <span className="text-gray-500 text-lg ml-1">
                         {metric.unit}
                       </span>
                     )}
@@ -538,11 +534,10 @@ export default function JobDetailsGraphs({
                   return (
                     <div
                       key={worker.id}
-                      className={`bg-zinc-900 border rounded-lg p-4 ${
-                        isActive
-                          ? "border-green-500/50 bg-green-900/10"
-                          : "border-zinc-800"
-                      }`}
+                      className={`bg-zinc-900 border rounded-lg p-4 ${isActive
+                        ? "border-green-500/50 bg-green-900/10"
+                        : "border-zinc-800"
+                        }`}
                     >
                       <div className="flex items-start justify-between">
                         <div className="flex-1">

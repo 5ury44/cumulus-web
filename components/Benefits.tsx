@@ -36,20 +36,20 @@ export default function Benefits() {
       <div className="max-w-7xl mx-auto">
         {/* Section Header */}
         <motion.div
-          initial={{ opacity: 0, y: 20 }}
+          initial={{ opacity: 0, y: 50 }}
           whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
+          viewport={{ once: true, margin: "-100px" }}
           transition={{ duration: 0.5 }}
           className="text-center mb-16"
         >
-          <h2 className="text-3xl sm:text-4xl font-light text-white mb-2">
+          <h2 className="text-4xl sm:text-5xl lg:text-6xl font-normal text-white mb-4 tracking-tight">
             Benefits
           </h2>
-          <p className="text-sm text-gray-500 max-w-xl mx-auto">For everyone</p>
+          <p className="text-base text-gray-400 max-w-xl mx-auto">For everyone</p>
         </motion.div>
 
         {/* Benefits Grid */}
-        <div className="grid md:grid-cols-3 gap-px bg-gray-800">
+        <div className="grid md:grid-cols-3 gap-6">
           {benefits.map((benefit, index) => {
             const Icon = benefit.icon;
             return (
@@ -59,18 +59,19 @@ export default function Benefits() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.4, delay: index * 0.05 }}
-                className="group"
+                className="group relative p-10 border border-white/10 bg-black hover:bg-white/5 transition-colors duration-500"
               >
-                <div className="p-8 border-b border-gray-800 hover:border-white transition-colors duration-300">
-                  <Icon className="text-white mb-4" size={24} />
-                  <h3 className="text-lg font-light text-white mb-1">
-                    {benefit.title}
-                  </h3>
-                  <p className="text-xs text-gray-500 mb-3 uppercase tracking-wide">
-                    {benefit.subtitle}
-                  </p>
-                  <p className="text-sm text-gray-500">{benefit.description}</p>
-                </div>
+                <div className="tech-border absolute inset-0 pointer-events-none" />
+                <Icon className="text-white mb-6" size={24} />
+                <h3 className="text-lg font-light text-white mb-2">
+                  {benefit.title}
+                </h3>
+                <p className="text-xs text-gray-500 mb-4 uppercase tracking-wide">
+                  {benefit.subtitle}
+                </p>
+                <p className="text-sm text-gray-400 leading-relaxed">
+                  {benefit.description}
+                </p>
               </motion.div>
             );
           })}

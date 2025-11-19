@@ -23,7 +23,7 @@ result = client.run(
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true }}
       transition={{ duration: 0.4 }}
-      className="mt-16 max-w-3xl mx-auto"
+      className="max-w-3xl mx-auto"
     >
       <div className="border border-gray-800 bg-black rounded-lg overflow-hidden">
         <div className="flex items-center gap-2 px-4 py-3 border-b border-gray-800">
