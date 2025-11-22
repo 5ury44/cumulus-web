@@ -34,19 +34,28 @@ result = client.run(
             example.py
           </span>
         </div>
-        <SyntaxHighlighter
-          language="python"
-          style={vscDarkPlus}
-          customStyle={{
-            margin: 0,
-            padding: "1.5rem",
-            background: "#000000",
-            fontSize: "0.875rem",
-          }}
-          showLineNumbers={false}
-        >
-          {codeString}
-        </SyntaxHighlighter>
+        <div className="overflow-x-auto">
+          <SyntaxHighlighter
+            language="python"
+            style={vscDarkPlus}
+            customStyle={{
+              margin: 0,
+              padding: "1rem", // Reduced padding for mobile
+              background: "#000000",
+              fontSize: "0.75rem", // Smaller font for mobile
+              minWidth: "100%", // Ensure full width
+            }}
+            codeTagProps={{
+              style: {
+                fontSize: "inherit",
+                fontFamily: "monospace",
+              },
+            }}
+            showLineNumbers={false}
+          >
+            {codeString}
+          </SyntaxHighlighter>
+        </div>
       </div>
     </motion.div>
   );

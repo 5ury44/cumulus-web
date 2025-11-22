@@ -44,7 +44,7 @@ export default function HowItWorks() {
   return (
     <section
       id="how-it-works"
-      className="relative py-24 sm:py-32 px-4 sm:px-6 lg:px-8"
+      className="relative py-16 sm:py-32 px-4 sm:px-6 lg:px-8"
     >
       <div className="max-w-7xl mx-auto">
         {/* Section Header */}
@@ -53,12 +53,12 @@ export default function HowItWorks() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: "-100px" }}
           transition={{ duration: 0.5 }}
-          className="text-center mb-16"
+          className="text-center mb-12 sm:mb-16"
         >
-          <h2 className="text-4xl sm:text-5xl lg:text-6xl font-normal text-white mb-4 tracking-tight">
+          <h2 className="text-3xl sm:text-5xl lg:text-6xl font-normal text-white mb-4 tracking-tight">
             How It Works
           </h2>
-          <p className="text-base text-gray-400 max-w-xl mx-auto">
+          <p className="text-sm sm:text-base text-gray-400 max-w-xl mx-auto">
             Simple, intelligent process
           </p>
         </motion.div>
@@ -105,7 +105,7 @@ export default function HowItWorks() {
           </div>
 
           {/* Scrollable Steps */}
-          <div className="space-y-32 lg:py-12 col-span-5">
+          <div className="space-y-12 sm:space-y-32 lg:py-12 col-span-5">
             {steps.map((step, index) => {
               const Icon = step.icon;
               return (
@@ -116,36 +116,40 @@ export default function HowItWorks() {
                   viewport={{ margin: "-20% 0px -20% 0px" }}
                   onViewportEnter={() => setActiveStep(index)}
                   transition={{ duration: 0.5 }}
-                  className={`relative p-10 border transition-all duration-500 rounded-lg ${activeStep === index
+                  className={`relative p-6 sm:p-10 border transition-all duration-500 rounded-lg ${activeStep === index
                     ? "border-white/30 bg-white/5"
                     : "border-white/5 bg-transparent opacity-50"
                     }`}
                 >
                   {/* Mobile Visual (only shown on mobile) */}
-                  <div className="lg:hidden mb-6">
+                  <div className="lg:hidden mb-6 overflow-hidden">
                     {step.visual === "sdk" ? (
-                      <SDKExample />
+                      <div className="transform scale-95 origin-top-left sm:scale-100">
+                        <SDKExample />
+                      </div>
                     ) : (
-                      <JobDetailsGraphs
-                        variant="embedded"
-                        title="Console"
-                        subtitle="Telemetry"
-                      />
+                      <div className="transform scale-95 origin-top-left sm:scale-100">
+                        <JobDetailsGraphs
+                          variant="embedded"
+                          title="Console"
+                          subtitle="Telemetry"
+                        />
+                      </div>
                     )}
                   </div>
 
                   <div className="flex items-start gap-4">
-                    <span className="text-sm text-gray-500 font-mono mt-1">
+                    <span className="text-xs sm:text-sm text-gray-500 font-mono mt-1">
                       {step.number}
                     </span>
                     <div>
                       <div className="flex items-center gap-3 mb-3">
                         <Icon className="text-white" size={24} />
-                        <h3 className="text-xl font-light text-white">
+                        <h3 className="text-lg sm:text-xl font-light text-white">
                           {step.title}
                         </h3>
                       </div>
-                      <p className="text-gray-400 leading-relaxed">
+                      <p className="text-sm sm:text-base text-gray-400 leading-relaxed">
                         {step.description}
                       </p>
                     </div>

@@ -252,10 +252,10 @@ export default function JobDetailsGraphs({
             transition={{ duration: 0.4 }}
             className={headerClassName}
           >
-            <h2 className="text-3xl sm:text-4xl font-light text-white mb-2">
+            <h2 className="text-2xl sm:text-3xl md:text-4xl font-light text-white mb-2">
               {resolvedTitle}
             </h2>
-            <p className="text-sm text-gray-500 max-w-xl mx-auto lg:mx-0">
+            <p className="text-xs sm:text-sm text-gray-500 max-w-xl mx-auto lg:mx-0">
               {resolvedSubtitle}
             </p>
           </motion.div>
@@ -271,14 +271,14 @@ export default function JobDetailsGraphs({
             className={cardBaseClasses}
           >
             <div className="mb-4">
-              <h3 className="text-xl font-semibold text-white mb-1">
+              <h3 className="text-lg sm:text-xl font-semibold text-white mb-1">
                 Key Metrics
               </h3>
-              <p className="text-sm text-zinc-500">
+              <p className="text-xs sm:text-sm text-zinc-500">
                 Performance and cost metrics
               </p>
             </div>
-            <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
+            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-3 sm:gap-4">
               {[
                 {
                   label: "Total GPU Hours",
@@ -317,15 +317,15 @@ export default function JobDetailsGraphs({
               ].map((metric) => (
                 <div
                   key={metric.label}
-                  className="bg-white/5 border border-white/10 p-4"
+                  className="bg-white/5 border border-white/10 p-3 sm:p-4"
                 >
-                  <div className="text-gray-500 text-xs uppercase tracking-wider mb-1">
+                  <div className="text-gray-500 text-[10px] sm:text-xs uppercase tracking-wider mb-1">
                     {metric.label}
                   </div>
-                  <div className="text-white text-2xl font-mono">
+                  <div className="text-white text-xl sm:text-2xl font-mono">
                     {metric.value}
                     {metric.unit && (
-                      <span className="text-gray-500 text-lg ml-1">
+                      <span className="text-gray-500 text-base sm:text-lg ml-1">
                         {metric.unit}
                       </span>
                     )}
@@ -344,87 +344,91 @@ export default function JobDetailsGraphs({
             className={cardBaseClasses}
           >
             <div className="mb-4">
-              <h3 className="text-xl font-semibold text-white mb-1">
+              <h3 className="text-lg sm:text-xl font-semibold text-white mb-1">
                 Cost Breakdown
               </h3>
-              <p className="text-sm text-zinc-500">Detailed cost analysis</p>
+              <p className="text-xs sm:text-sm text-zinc-500">Detailed cost analysis</p>
             </div>
             <div className="space-y-6">
               <div className="text-center">
-                <div className="text-zinc-400 text-sm mb-1">Total Cost</div>
-                <div className="text-4xl font-bold text-white">
+                <div className="text-zinc-400 text-xs sm:text-sm mb-1">Total Cost</div>
+                <div className="text-3xl sm:text-4xl font-bold text-white">
                   {formatCost(costData.totalCostCents)}
                 </div>
               </div>
 
               {costData.gpuTypeData.length > 0 && (
                 <div>
-                  <h4 className="text-white font-semibold mb-4">
+                  <h4 className="text-white font-semibold mb-4 text-sm sm:text-base">
                     Cost by GPU Type
                   </h4>
-                  <ResponsiveContainer width="100%" height={300}>
-                    <PieChart>
-                      <Pie
-                        data={costData.gpuTypeData}
-                        cx="50%"
-                        cy="50%"
-                        labelLine={false}
-                        label={({ name, formatted }) => `${name}: ${formatted}`}
-                        outerRadius={80}
-                        fill="#8884d8"
-                        dataKey="value"
-                      >
-                        {costData.gpuTypeData.map((entry, index) => (
-                          <Cell
-                            key={`cell-${index}`}
-                            fill={COLORS[index % COLORS.length]}
-                          />
-                        ))}
-                      </Pie>
-                      <Tooltip
-                        formatter={(value: number) => formatCost(Number(value))}
-                      />
-                      <Legend />
-                    </PieChart>
-                  </ResponsiveContainer>
+                  <div className="h-[250px] sm:h-[300px]">
+                    <ResponsiveContainer width="100%" height="100%">
+                      <PieChart>
+                        <Pie
+                          data={costData.gpuTypeData}
+                          cx="50%"
+                          cy="50%"
+                          labelLine={false}
+                          label={({ name, formatted }) => `${name}: ${formatted}`}
+                          outerRadius={80}
+                          fill="#8884d8"
+                          dataKey="value"
+                        >
+                          {costData.gpuTypeData.map((entry, index) => (
+                            <Cell
+                              key={`cell-${index}`}
+                              fill={COLORS[index % COLORS.length]}
+                            />
+                          ))}
+                        </Pie>
+                        <Tooltip
+                          formatter={(value: number) => formatCost(Number(value))}
+                        />
+                        <Legend />
+                      </PieChart>
+                    </ResponsiveContainer>
+                  </div>
                 </div>
               )}
 
               {costData.workerData.length > 0 && (
                 <div>
-                  <h4 className="text-white font-semibold mb-4">
+                  <h4 className="text-white font-semibold mb-4 text-sm sm:text-base">
                     Cost per Worker
                   </h4>
-                  <ResponsiveContainer width="100%" height={300}>
-                    <BarChart data={costData.workerData}>
-                      <CartesianGrid strokeDasharray="3 3" stroke="#374151" />
-                      <XAxis
-                        dataKey="name"
-                        stroke="#9ca3af"
-                        style={{ fontSize: "12px" }}
-                      />
-                      <YAxis
-                        stroke="#9ca3af"
-                        style={{ fontSize: "12px" }}
-                        tickFormatter={(value) =>
-                          `$${(Number(value) / 100).toFixed(0)}`
-                        }
-                      />
-                      <Tooltip
-                        formatter={(value: number) => formatCost(Number(value))}
-                        contentStyle={{
-                          backgroundColor: "#18181b",
-                          border: "1px solid #3f3f46",
-                          borderRadius: "8px",
-                        }}
-                      />
-                      <Bar
-                        dataKey="cost"
-                        fill="#3b82f6"
-                        radius={[8, 8, 0, 0]}
-                      />
-                    </BarChart>
-                  </ResponsiveContainer>
+                  <div className="h-[250px] sm:h-[300px]">
+                    <ResponsiveContainer width="100%" height="100%">
+                      <BarChart data={costData.workerData}>
+                        <CartesianGrid strokeDasharray="3 3" stroke="#374151" />
+                        <XAxis
+                          dataKey="name"
+                          stroke="#9ca3af"
+                          style={{ fontSize: "10px" }}
+                        />
+                        <YAxis
+                          stroke="#9ca3af"
+                          style={{ fontSize: "10px" }}
+                          tickFormatter={(value) =>
+                            `$${(Number(value) / 100).toFixed(0)}`
+                          }
+                        />
+                        <Tooltip
+                          formatter={(value: number) => formatCost(Number(value))}
+                          contentStyle={{
+                            backgroundColor: "#18181b",
+                            border: "1px solid #3f3f46",
+                            borderRadius: "8px",
+                          }}
+                        />
+                        <Bar
+                          dataKey="cost"
+                          fill="#3b82f6"
+                          radius={[8, 8, 0, 0]}
+                        />
+                      </BarChart>
+                    </ResponsiveContainer>
+                  </div>
                 </div>
               )}
             </div>
@@ -439,69 +443,71 @@ export default function JobDetailsGraphs({
             className={cardBaseClasses}
           >
             <div className="mb-4">
-              <h3 className="text-xl font-semibold text-white mb-1">
+              <h3 className="text-lg sm:text-xl font-semibold text-white mb-1">
                 GPU Utilization
               </h3>
-              <p className="text-sm text-zinc-500">
+              <p className="text-xs sm:text-sm text-zinc-500">
                 Monitor Health and Performance
               </p>
             </div>
             <div className="space-y-6">
               <div>
-                <h4 className="text-white font-semibold mb-4">
+                <h4 className="text-white font-semibold mb-4 text-sm sm:text-base">
                   Utilization & Memory
                 </h4>
-                <ResponsiveContainer width="100%" height={300}>
-                  <LineChart data={utilizationData}>
-                    <CartesianGrid strokeDasharray="3 3" stroke="#374151" />
-                    <XAxis
-                      dataKey="time"
-                      stroke="#9ca3af"
-                      style={{ fontSize: "12px" }}
-                    />
-                    <YAxis
-                      yAxisId="left"
-                      stroke="#9ca3af"
-                      style={{ fontSize: "12px" }}
-                      label={{ value: "%", angle: -90, position: "insideLeft" }}
-                    />
-                    <YAxis
-                      yAxisId="right"
-                      orientation="right"
-                      stroke="#9ca3af"
-                      style={{ fontSize: "12px" }}
-                      label={{
-                        value: "GB",
-                        angle: 90,
-                        position: "insideRight",
-                      }}
-                    />
-                    <Tooltip
-                      contentStyle={{
-                        backgroundColor: "#18181b",
-                        border: "1px solid #3f3f46",
-                        borderRadius: "8px",
-                      }}
-                    />
-                    <Legend />
-                    <Line
-                      yAxisId="left"
-                      type="monotone"
-                      dataKey="utilization"
-                      stroke="#3b82f6"
-                      name="Utilization %"
-                      strokeWidth={2}
-                    />
-                    <Line
-                      yAxisId="right"
-                      type="monotone"
-                      dataKey="memory"
-                      stroke="#8b5cf6"
-                      name="Memory (GB)"
-                      strokeWidth={2}
-                    />
-                  </LineChart>
-                </ResponsiveContainer>
+                <div className="h-[250px] sm:h-[300px]">
+                  <ResponsiveContainer width="100%" height="100%">
+                    <LineChart data={utilizationData}>
+                      <CartesianGrid strokeDasharray="3 3" stroke="#374151" />
+                      <XAxis
+                        dataKey="time"
+                        stroke="#9ca3af"
+                        style={{ fontSize: "10px" }}
+                      />
+                      <YAxis
+                        yAxisId="left"
+                        stroke="#9ca3af"
+                        style={{ fontSize: "10px" }}
+                        label={{ value: "%", angle: -90, position: "insideLeft" }}
+                      />
+                      <YAxis
+                        yAxisId="right"
+                        orientation="right"
+                        stroke="#9ca3af"
+                        style={{ fontSize: "10px" }}
+                        label={{
+                          value: "GB",
+                          angle: 90,
+                          position: "insideRight",
+                        }}
+                      />
+                      <Tooltip
+                        contentStyle={{
+                          backgroundColor: "#18181b",
+                          border: "1px solid #3f3f46",
+                          borderRadius: "8px",
+                        }}
+                      />
+                      <Legend />
+                      <Line
+                        yAxisId="left"
+                        type="monotone"
+                        dataKey="utilization"
+                        stroke="#3b82f6"
+                        name="Utilization %"
+                        strokeWidth={2}
+                      />
+                      <Line
+                        yAxisId="right"
+                        type="monotone"
+                        dataKey="memory"
+                        stroke="#8b5cf6"
+                        name="Memory (GB)"
+                        strokeWidth={2}
+                      />
+                    </LineChart>
+                  </ResponsiveContainer>
+                </div>
               </div>
             </div>
           </motion.div>
@@ -515,10 +521,10 @@ export default function JobDetailsGraphs({
             className={cardBaseClasses}
           >
             <div className="mb-4">
-              <h3 className="text-xl font-semibold text-white mb-1">
+              <h3 className="text-lg sm:text-xl font-semibold text-white mb-1">
                 Worker Timeline
               </h3>
-              <p className="text-sm text-zinc-500">
+              <p className="text-xs sm:text-sm text-zinc-500">
                 Worker lifecycle and costs
               </p>
             </div>
@@ -534,31 +540,31 @@ export default function JobDetailsGraphs({
                   return (
                     <div
                       key={worker.id}
-                      className={`bg-zinc-900 border rounded-lg p-4 ${isActive
+                      className={`bg-zinc-900 border rounded-lg p-3 sm:p-4 ${isActive
                         ? "border-green-500/50 bg-green-900/10"
                         : "border-zinc-800"
                         }`}
                     >
-                      <div className="flex items-start justify-between">
+                      <div className="flex flex-col sm:flex-row sm:items-start justify-between gap-2 sm:gap-0">
                         <div className="flex-1">
-                          <div className="flex items-center gap-4 mb-2">
-                            <span className="text-white font-semibold">
+                          <div className="flex flex-wrap items-center gap-2 sm:gap-4 mb-2">
+                            <span className="text-white font-semibold text-sm sm:text-base">
                               Worker {worker.worker_rank || "—"}
                             </span>
                             {isActive && (
-                              <span className="px-2 py-0.5 rounded-full text-xs bg-green-500/20 text-green-400">
+                              <span className="px-2 py-0.5 rounded-full text-[10px] sm:text-xs bg-green-500/20 text-green-400">
                                 Active
                               </span>
                             )}
                             {worker.gpu_type && (
-                              <span className="text-zinc-500 text-sm">
+                              <span className="text-zinc-500 text-xs sm:text-sm">
                                 {worker.gpu_type}
                               </span>
                             )}
                           </div>
-                          <div className="text-sm text-zinc-500 space-y-1">
+                          <div className="text-xs sm:text-sm text-zinc-500 space-y-1">
                             <div>Duration: {worker.duration}</div>
-                            <div>
+                            <div className="flex flex-col sm:flex-row sm:gap-4">
                               {worker.joined_at && (
                                 <span>
                                   Joined:{" "}
@@ -566,7 +572,7 @@ export default function JobDetailsGraphs({
                                 </span>
                               )}
                               {worker.left_at && (
-                                <span className="ml-4">
+                                <span>
                                   Left:{" "}
                                   {new Date(worker.left_at).toLocaleString()}
                                 </span>
@@ -574,9 +580,9 @@ export default function JobDetailsGraphs({
                             </div>
                           </div>
                         </div>
-                        <div className="text-right">
-                          <div className="text-zinc-500 text-sm mb-1">Cost</div>
-                          <div className="text-white text-lg font-semibold">
+                        <div className="text-left sm:text-right mt-2 sm:mt-0">
+                          <div className="text-zinc-500 text-xs sm:text-sm mb-1">Cost</div>
+                          <div className="text-white text-base sm:text-lg font-semibold">
                             {formatCost(worker.cost)}
                           </div>
                         </div>
@@ -597,10 +603,10 @@ export default function JobDetailsGraphs({
             className={cardBaseClasses}
           >
             <div className="mb-4">
-              <h3 className="text-xl font-semibold text-white mb-1">
+              <h3 className="text-lg sm:text-xl font-semibold text-white mb-1">
                 Checkpoints
               </h3>
-              <p className="text-sm text-zinc-500">Saved model checkpoints</p>
+              <p className="text-xs sm:text-sm text-zinc-500">Saved model checkpoints</p>
             </div>
             {checkpointsData.length === 0 ? (
               <div className="text-zinc-400 text-center py-8">
@@ -628,26 +634,26 @@ export default function JobDetailsGraphs({
                   return (
                     <div
                       key={checkpoint.id}
-                      className="bg-zinc-900 border border-zinc-800 rounded-lg p-4"
+                      className="bg-zinc-900 border border-zinc-800 rounded-lg p-3 sm:p-4"
                     >
-                      <div className="flex items-start justify-between">
+                      <div className="flex flex-col sm:flex-row sm:items-start justify-between gap-3 sm:gap-0">
                         <div className="flex-1">
-                          <div className="flex items-center gap-4 mb-2">
-                            <span className="text-white font-semibold">
+                          <div className="flex flex-wrap items-center gap-2 sm:gap-4 mb-2">
+                            <span className="text-white font-semibold text-sm sm:text-base break-all">
                               {checkpoint.checkpoint_id || checkpoint.id}
                             </span>
                             {checkpoint.epoch && (
-                              <span className="text-zinc-500 text-sm">
+                              <span className="text-zinc-500 text-xs sm:text-sm">
                                 Epoch: {checkpoint.epoch}
                               </span>
                             )}
                             {checkpoint.step && (
-                              <span className="text-zinc-500 text-sm">
+                              <span className="text-zinc-500 text-xs sm:text-sm">
                                 Step: {checkpoint.step}
                               </span>
                             )}
                           </div>
-                          <div className="text-sm text-zinc-500 space-y-1">
+                          <div className="text-xs sm:text-sm text-zinc-500 space-y-1">
                             <div>
                               Size: {formatFileSize(checkpoint.file_size_bytes)}
                             </div>
@@ -655,7 +661,7 @@ export default function JobDetailsGraphs({
                               Created: {formatDate(checkpoint.created_at)}
                             </div>
                             {checkpoint.s3_bucket && checkpoint.s3_key && (
-                              <div className="text-xs font-mono text-zinc-600">
+                              <div className="text-[10px] sm:text-xs font-mono text-zinc-600 break-all">
                                 s3://{checkpoint.s3_bucket}/{checkpoint.s3_key}
                               </div>
                             )}
@@ -663,7 +669,7 @@ export default function JobDetailsGraphs({
                         </div>
                         {checkpoint.s3_key && (
                           <button
-                            className="px-3 py-1.5 text-sm border-2 border-zinc-800 text-zinc-400 hover:bg-zinc-900 hover:text-white rounded-lg transition-colors"
+                            className="self-start sm:self-auto px-3 py-1.5 text-xs sm:text-sm border-2 border-zinc-800 text-zinc-400 hover:bg-zinc-900 hover:text-white rounded-lg transition-colors"
                             onClick={() => {
                               // Placeholder for download
                             }}

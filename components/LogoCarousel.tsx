@@ -38,9 +38,9 @@ export default function LogoCarousel() {
             {logos.map((logo, index) => (
               <div
                 key={`${logo.name}-${index}`}
-                className="flex items-center justify-center opacity-50 hover:opacity-100 transition-opacity duration-300 mx-12"
+                className="flex items-center justify-center opacity-50 hover:opacity-100 transition-opacity duration-300 mx-6 sm:mx-12"
               >
-                <div className="relative h-12 w-40 flex items-center justify-center">
+                <div className="relative h-8 sm:h-12 w-28 sm:w-40 flex items-center justify-center">
                   <img
                     src={logo.src}
                     alt={logo.name}
@@ -53,10 +53,10 @@ export default function LogoCarousel() {
           </Marquee>
 
           {/* Left fade gradient */}
-          <div className="absolute left-0 top-0 bottom-0 w-32 bg-gradient-to-r from-black via-black/80 to-transparent pointer-events-none" />
+          <div className="absolute left-0 top-0 bottom-0 w-16 sm:w-32 bg-gradient-to-r from-black via-black/80 to-transparent pointer-events-none" />
 
           {/* Right fade gradient */}
-          <div className="absolute right-0 top-0 bottom-0 w-32 bg-gradient-to-l from-black via-black/80 to-transparent pointer-events-none" />
+          <div className="absolute right-0 top-0 bottom-0 w-16 sm:w-32 bg-gradient-to-l from-black via-black/80 to-transparent pointer-events-none" />
         </div>
       </div>
     </section>

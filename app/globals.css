@@ -36,6 +36,7 @@
   .tech-border {
     position: relative;
   }
+
   .tech-border::before,
   .tech-border::after {
     content: "";
@@ -45,18 +46,21 @@
     border: 1px solid rgba(255, 255, 255, 0.3);
     transition: all 0.3s ease;
   }
+
   .tech-border::before {
     top: -1px;
     left: -1px;
     border-right: 0;
     border-bottom: 0;
   }
+
   .tech-border::after {
     bottom: -1px;
     right: -1px;
     border-left: 0;
     border-top: 0;
   }
+
   .group:hover .tech-border::before,
   .group:hover .tech-border::after {
     border-color: rgba(255, 255, 255, 0.8);
@@ -73,6 +77,15 @@
 
 html {
   scroll-behavior: smooth;
+  font-size: 14px;
+  /* Base font size for mobile */
+}
+
+@media (min-width: 640px) {
+  html {
+    font-size: 16px;
+    /* Base font size for desktop */
+  }
 }
 
 body {
@@ -82,11 +95,20 @@ body {
   line-height: 1.6;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
+  /* Prevent horizontal scroll on mobile */
 }
 
 /* Custom scrollbar */
 ::-webkit-scrollbar {
-  width: 10px;
+  width: 6px;
+  /* Thinner scrollbar on mobile */
+}
+
+@media (min-width: 640px) {
+  ::-webkit-scrollbar {
+    width: 10px;
+  }
 }
 
 ::-webkit-scrollbar-track {

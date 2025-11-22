@@ -79,7 +79,7 @@ export default function Features() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.4, delay: index * 0.05 }}
-                className="group relative p-10 border border-white/10 bg-black hover:bg-white/5 transition-colors duration-500"
+                className="group relative p-12 border border-white/10 bg-black hover:bg-white/5 transition-colors duration-500"
               >
                 <div className="tech-border absolute inset-0 pointer-events-none" />
                 <Icon className="text-white mb-6" size={24} />
